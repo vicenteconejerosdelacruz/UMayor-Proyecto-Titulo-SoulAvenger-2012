@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{CD8C9303-404B-FB8D-6B9B-21988D5CAC0A}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_0;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_ANDROID;ENABLE_GENERICS;ENABLE_TERRAIN;ENABLE_WEBCAM;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\CallJavaCode.cs" />
+     <Compile Include="Assets\Scripts\Ammos\Ammo.cs" />
+     <Compile Include="Assets\Scripts\Ammos\Beam.cs" />
+     <Compile Include="Assets\Scripts\Ammos\CannonBall.cs" />
+     <Compile Include="Assets\Scripts\Ammos\FollowingAmmo.cs" />
+     <Compile Include="Assets\Scripts\Ammos\GeyserAmmo.cs" />
+     <Compile Include="Assets\Scripts\Ammos\LinearAmmo.cs" />
+     <Compile Include="Assets\Scripts\Ammos\SonicBoom.cs" />
+     <Compile Include="Assets\Scripts\Ammos\TrailAmmo.cs" />
+     <Compile Include="Assets\Scripts\AnimationEventFunctions.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Attack.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Blood_Steel\CannonAttack.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Charge.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Demonic_Lord1\AbyssCircle.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Demonic_Lord2\RainDrops.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Kraken\GeyserAttack.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Kraken\TentacleAttack.cs" />
+     <Compile Include="Assets\Scripts\Attacks\LifeDrain.cs" />
+     <Compile Include="Assets\Scripts\Attacks\LifeRecharge.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Melee.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Ranged.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Summon.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Turret.cs" />
+     <Compile Include="Assets\Scripts\AudioPool.cs" />
+     <Compile Include="Assets\Scripts\Buffs\Buff.cs" />
+     <Compile Include="Assets\Scripts\Buffs\BuffOverTime.cs" />
+     <Compile Include="Assets\Scripts\Buffs\Potions\BerserkBuff.cs" />
+     <Compile Include="Assets\Scripts\Buffs\Potions\HermesBuff.cs" />
+     <Compile Include="Assets\Scripts\Buffs\Potions\IronSkinBuff.cs" />
+     <Compile Include="Assets\Scripts\Buffs\Potions\LuckyShotBuff.cs" />
+     <Compile Include="Assets\Scripts\Buffs\Skills\SoulAvengerBuff.cs" />
+     <Compile Include="Assets\Scripts\CameraManager.cs" />
+     <Compile Include="Assets\Scripts\Characters\Hero.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\CinematicEvent.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\EnableAttacksOnEnemy.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\EndChapter5.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest12LastGhostPirate.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest13AppearBloodSteel.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest17AfterDefeatingKraken.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest17BeginCinematic.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest18AfterDefeatingImp.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest18LastImp.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest1AfterFirstWave.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest1CinematicBegin.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest21AfterDefeatingLavaGolem.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest21BeginCinematic.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest24AfterDefeatingMagmaPhoenix.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest24MagmaPhoenixDialog.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest26AfterDefeatingExecutioner.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest26BeginCinematic.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest28BeginCinematic.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest30AfterDefeatingAurora.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest30BeginCinematic.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest3AtBigReaperDeath.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest3CinematicBegin.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest4AfterDefeatingDemonicLord.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest4CinematicBegin.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest7AppearWerewolf.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest9AfterDefeatingGreenDarkness.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\Quest9CinematicBegin.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\ShowQuestTitle.cs" />
+     <Compile Include="Assets\Scripts\Cinematics\SpawnEnemy.cs" />
+     <Compile Include="Assets\Scripts\Enemies\BasicEnemy.cs" />
+     <Compile Include="Assets\Scripts\Enemies\GreenDarkness.cs" />
+     <Compile Include="Assets\Scripts\Enemies\ImpalerTentacle.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Kraken.cs" />
+     <Compile Include="Assets\Scripts\Enemies\KrakenTentacle.cs" />
+     <Compile Include="Assets\Scripts\Engine\Game.cs" />
+     <Compile Include="Assets\Scripts\Engine\Item.cs" />
+     <Compile Include="Assets\Scripts\Engine\TranslatedText.cs" />
+     <Compile Include="Assets\Scripts\Engine\WeaponStats.cs" />
+     <Compile Include="Assets\Scripts\Engine\tk2dTextPatch.cs" />
+     <Compile Include="Assets\Scripts\Events\AuroraHealing.cs" />
+     <Compile Include="Assets\Scripts\Events\CallFinallyDie.cs" />
+     <Compile Include="Assets\Scripts\Events\CallOnDie.cs" />
+     <Compile Include="Assets\Scripts\Events\CloseEasterQuest.cs" />
+     <Compile Include="Assets\Scripts\Events\CloseQuest.cs" />
+     <Compile Include="Assets\Scripts\Events\CompleteTapjoyPPA.cs" />
+     <Compile Include="Assets\Scripts\Events\ContinueGame.cs" />
+     <Compile Include="Assets\Scripts\Events\DeleteOntk2dAnimComplete.cs" />
+     <Compile Include="Assets\Scripts\Events\DisableEnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\Events\EnableEnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\Events\EndChapter1.cs" />
+     <Compile Include="Assets\Scripts\Events\GameOver.cs" />
+     <Compile Include="Assets\Scripts\Events\GoBackToTown.cs" />
+     <Compile Include="Assets\Scripts\Events\LoadLevel.cs" />
+     <Compile Include="Assets\Scripts\Events\LoadLevelAdditive.cs" />
+     <Compile Include="Assets\Scripts\Events\OpenDialog.cs" />
+     <Compile Include="Assets\Scripts\Events\Potions\UseBerserkPotion.cs" />
+     <Compile Include="Assets\Scripts\Events\Potions\UseElixirPotion.cs" />
+     <Compile Include="Assets\Scripts\Events\Potions\UseFenixTearsPotion.cs" />
+     <Compile Include="Assets\Scripts\Events\Potions\UseHealingPotion.cs" />
+     <Compile Include="Assets\Scripts\Events\Potions\UseHermesPotion.cs" />
+     <Compile Include="Assets\Scripts\Events\Potions\UseIronSkinPotion.cs" />
+     <Compile Include="Assets\Scripts\Events\Potions\UseLuckyShotPotion.cs" />
+     <Compile Include="Assets\Scripts\Events\Potions\UseManaPotion.cs" />
+     <Compile Include="Assets\Scripts\Events\ShowAcceptQuestWindow.cs" />
+     <Compile Include="Assets\Scripts\Events\ShowAcceptSideQuestWindow.cs" />
+     <Compile Include="Assets\Scripts\Events\StartEasterQuest.cs" />
+     <Compile Include="Assets\Scripts\Events\StartKrakenRage.cs" />
+     <Compile Include="Assets\Scripts\Events\StartQuest.cs" />
+     <Compile Include="Assets\Scripts\Events\TCallback.cs" />
+     <Compile Include="Assets\Scripts\Events\TakeItemFromInventory.cs" />
+     <Compile Include="Assets\Scripts\Events\TransformDemonicLord.cs" />
+     <Compile Include="Assets\Scripts\Events\TransformMagmaPhoenix.cs" />
+     <Compile Include="Assets\Scripts\Events\Tutorials\Tutorial_1_Event.cs" />
+     <Compile Include="Assets\Scripts\Events\Tutorials\Tutorial_2_Event.cs" />
+     <Compile Include="Assets\Scripts\Events\UnlockTown.cs" />
+     <Compile Include="Assets\Scripts\Events\UnlockWorldMapNavigation.cs" />
+     <Compile Include="Assets\Scripts\Events\WriteSaveGameIfNoQuest.cs" />
+     <Compile Include="Assets\Scripts\Fx\CallAnimationEvent.cs" />
+     <Compile Include="Assets\Scripts\Fx\CameraShake.cs" />
+     <Compile Include="Assets\Scripts\Fx\KeepDirection.cs" />
+     <Compile Include="Assets\Scripts\Fx\LifeDrainEffect.cs" />
+     <Compile Include="Assets\Scripts\Fx\LiftingText.cs" />
+     <Compile Include="Assets\Scripts\Fx\OnCollision.cs" />
+     <Compile Include="Assets\Scripts\Fx\QuestTitleEffect.cs" />
+     <Compile Include="Assets\Scripts\Fx\SetBlobDepth.cs" />
+     <Compile Include="Assets\Scripts\Game\Character.cs" />
+     <Compile Include="Assets\Scripts\Game\Equipment.cs" />
+     <Compile Include="Assets\Scripts\Game\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Game\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Gui\AdjustToAspectRatio.cs" />
+     <Compile Include="Assets\Scripts\Gui\BackToTownOnTouch.cs" />
+     <Compile Include="Assets\Scripts\Gui\Buttons.cs" />
+     <Compile Include="Assets\Scripts\Gui\CloseMessageWindow.cs" />
+     <Compile Include="Assets\Scripts\Gui\CreditsUI.cs" />
+     <Compile Include="Assets\Scripts\Gui\DataGame.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\FormattedLabel\FormattedHyperlink.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\FormattedLabel\FormattedLabel.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\FormattedLabel\FormattedLine.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\FormattedLabel\ICommand.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\FormattedLabel\IHyperlinkCallback.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\FormattedLabel\Sequence.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\FormattedLabel\TextFormatter.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\Utils\GuiHelperDrawLine.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\Utils\HexUtil.cs" />
+     <Compile Include="Assets\Scripts\Gui\FancyLabel\Utils\ProfilerFree.cs" />
+     <Compile Include="Assets\Scripts\Gui\GameDescription.cs" />
+     <Compile Include="Assets\Scripts\Gui\GemsExchangeGui.cs" />
+     <Compile Include="Assets\Scripts\Gui\GemsStoreGui.cs" />
+     <Compile Include="Assets\Scripts\Gui\GuiUtils.cs" />
+     <Compile Include="Assets\Scripts\Gui\Hud.cs" />
+     <Compile Include="Assets\Scripts\Gui\HudInventory.cs" />
+     <Compile Include="Assets\Scripts\Gui\IntroSkip.cs" />
+     <Compile Include="Assets\Scripts\Gui\LevelCompleteScreen.cs" />
+     <Compile Include="Assets\Scripts\Gui\LoadingScreen.cs" />
+     <Compile Include="Assets\Scripts\Gui\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Gui\StoreGui.cs" />
+     <Compile Include="Assets\Scripts\Gui\TownButtonHandler.cs" />
+     <Compile Include="Assets\Scripts\Gui\TownGui.cs" />
+     <Compile Include="Assets\Scripts\Gui\TutorialInfo.cs" />
+     <Compile Include="Assets\Scripts\Gui\WorldMap.cs" />
+     <Compile Include="Assets\Scripts\Muneris\AdsDelegate.cs" />
+     <Compile Include="Assets\Scripts\Muneris\EventHandler.cs" />
+     <Compile Include="Assets\Scripts\NPC\BlacksmithNPC.cs" />
+     <Compile Include="Assets\Scripts\NPC\MerchantNPC.cs" />
+     <Compile Include="Assets\Scripts\NPC\ShopKeeper.cs" />
+     <Compile Include="Assets\Scripts\NPC\SwordmasterNPC.cs" />
+     <Compile Include="Assets\Scripts\Quests\Dialog.cs" />
+     <Compile Include="Assets\Scripts\Quests\MetaQuest.cs" />
+     <Compile Include="Assets\Scripts\Quests\MetaQuestPool.cs" />
+     <Compile Include="Assets\Scripts\Quests\Quest.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestAward.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestManager.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestPool.cs" />
+     <Compile Include="Assets\Scripts\Quests\Types\KillQuest.cs" />
+     <Compile Include="Assets\Scripts\Quests\Types\LootQuest.cs" />
+     <Compile Include="Assets\Scripts\Quests\Types\MetaKillQuest.cs" />
+     <Compile Include="Assets\Scripts\Quests\Types\QuestObjective.cs" />
+     <Compile Include="Assets\Scripts\Quests\Types\RescueQuest.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkCharge.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkCurse.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkDrainLife.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkMeteor.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkShield.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkSlash.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkSlowMotion.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkSoulAvenger.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkSummonDragon.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkThunder.cs" />
+     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
+     <Compile Include="Assets\Scripts\TexturePool.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutEquipment.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutMapTown.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutNewTown.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutPotionsMerchant.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutQuickInventoryPotions.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutShowIconKeepers.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutSkillAndMagic.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutTakeHealing.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutTargetEnemy.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\TutUsePointStat.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\Tutorial.cs" />
+     <Compile Include="Assets\Scripts\Utils\CollisionDetection.cs" />
+     <Compile Include="Assets\Scripts\Utils\DestroyOnAudioStop.cs" />
+     <Compile Include="Assets\Scripts\Utils\DontDestroyOnLoad.cs" />
+     <Compile Include="Assets\Scripts\Utils\FPSDisplay.cs" />
+     <Compile Include="Assets\Scripts\Utils\FancyLabelTest.cs" />
+     <Compile Include="Assets\Scripts\Utils\HaxForceAlpha.cs" />
+     <Compile Include="Assets\Scripts\Utils\Items\ItemPrice.cs" />
+     <Compile Include="Assets\Scripts\Utils\Items\PriceByUnlockedTown.cs" />
+     <Compile Include="Assets\Scripts\Utils\LetterBoxes.cs" />
+     <Compile Include="Assets\Scripts\Utils\LightsOutMode.cs" />
+     <Compile Include="Assets\Scripts\Utils\PlayInRandomIntervals.cs" />
+     <Compile Include="Assets\Scripts\Utils\PopUpMessage.cs" />
+     <Compile Include="Assets\Scripts\Utils\ScreenShooter.cs" />
+     <Compile Include="Assets\Scripts\Utils\ScrollObject.cs" />
+     <Compile Include="Assets\Scripts\Utils\Shifter.cs" />
+     <Compile Include="Assets\Scripts\Utils\TEncryptor.cs" />
+     <Compile Include="Assets\Scripts\Utils\TEventNotificationString.cs" />
+     <Compile Include="Assets\Scripts\Utils\TFlurryManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\TMonoBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Utils\TPaymentManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\TPool.cs" />
+     <Compile Include="Assets\Scripts\Utils\TapjoyDates.cs" />
+     <Compile Include="Assets\Scripts\Utils\UseOriginAsFeet.cs" />
+     <Compile Include="Assets\Scripts\Utils\WaitToPlayDefaultAnim.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCamera.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraAnchor.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSlicedSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteCollectionInterfaces.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\TileMap\tk2dTileMap.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\TileMap\tk2dTileMapBuilderUtil.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\TileMap\tk2dTileMapChunks.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\TileMap\tk2dTileMapColliderBuilder.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\TileMap\tk2dTileMapData.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\TileMap\tk2dTileMapMeshBuilder.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Fonts\tk2dFont.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Fonts\tk2dFontData.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Fonts\tk2dTextMesh.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Gui\tk2dButton.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Sprites\tk2dAnimatedSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Sprites\tk2dBaseSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Sprites\tk2dPixelPerfectHelper.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Sprites\tk2dSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Sprites\tk2dSpriteAnimation.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Sprites\tk2dSpriteCollection.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Sprites\tk2dSpriteCollectionData.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Sprites\tk2dStaticSpriteBatcher.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\tk2dIndex.cs" />
+     <None Include="Assets\Plugins\Android\vendors\mopub\1.7.0.0\mopub-android-sdk\res\layout\video_loading_progress.xml" />
+     <None Include="Assets\Plugins\Android\vendors\mopub\1.7.0.0\mopub-android-sdk\libs\README.txt" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\LitSolidVertexColor.shader" />
+     <None Include="Assets\Plugins\Android\vendors\facebook\3.1.1\facebook-sdk\build.xml" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\SolidVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\LitPremulVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\PremulVertexColor.shader" />
+     <None Include="Assets\Plugins\Android\vendors\mopub\1.7.0.0\mopub-android-sdk\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\vendors\mopub\1.7.0.0\mopub-android-sdk\proguard-project.txt" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\Blend2TexVertexColor.shader" />
+     <None Include="Assets\Resources\example_config.txt" />
+     <None Include="Assets\Plugins\Android\res\values\strings.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Shaders\ForceField.shader" />
+     <None Include="Assets\Shaders\SortableSpriteBlendVertex.shader" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\BlendVertexColor.shader" />
+     <None Include="Assets\Resources\Credits\Credits.xml" />
+     <None Include="Assets\Shaders\UVShifting.shader" />
+     <None Include="Assets\Plugins\Android\vendors\mopub\1.7.0.0\mopub-android-sdk\res\layout\mraid_browser.xml" />
+     <None Include="Assets\Shaders\SortableSprite.shader" />
+     <None Include="Assets\Resources\GameData.xml" />
+     <None Include="Assets\Resources\local envars.txt" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\LitBlendVertexColor.shader" />
+     <None Include="Assets\Plugins\Android\vendors\facebook\3.1.1\facebook-sdk\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\vendors\facebook\3.1.1\facebook-sdk\proguard-project.txt" />
+     <None Include="Assets\Plugins\Android\vendors\mopub\1.7.0.0\mopub-android-sdk\build.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{2662B409-6332-1E56-D797-C9025C53BDD6}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

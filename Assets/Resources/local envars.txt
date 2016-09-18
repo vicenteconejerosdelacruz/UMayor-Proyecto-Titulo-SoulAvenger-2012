@@ -1,0 +1,141 @@
+{
+  "googleiap": {
+    "sku": {
+      "mappings": {
+        "ttksoulavengergems6": "com.trutruka.tksoulavenger.ttksoulavengergems6",
+        "ttksoulavengergems1": "com.trutruka.tksoulavenger.ttksoulavengergems1",
+        "ttksoulavengergems4": "com.trutruka.tksoulavenger.ttksoulavengergems4",
+        "ttksoulavengergems3": "com.trutruka.tksoulavenger.ttksoulavengergems3",
+        "ttksoulavengergems2": "com.trutruka.tksoulavenger.ttksoulavengergems2",
+        "ttksoulavengergems5": "com.trutruka.tksoulavenger.ttksoulavengergems5"
+      }
+    },
+    "debug": false,
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnCcZkrNpd6kiIO6UcEVx+TUjZ7sVlN+vC3j3TT+0FGqjksqndhhoywyMVmNKF2bCsVsu/i8ORNv2M17PCa9mRYjY3VF0pwzbweYAr98UNKE4wZbauabTLHQNzqT/H8dIt8nzbqzMlmHvJpCz697nSGtemD5bLj2hrOqLwptgR9dK/qlIvvWlAB7M6/6O0vHpCzWtZ13C3RJkZ+vaMwosNlQ4K/z8bnkiy3ffko5fNYA6spiFJdg7tH55CICOc7sS2lXd+/xOtK7ULbv5Ch7jrm+acpK4/oC45FWwpDzUTPJaeGwbI8dQh3nqNzQGgdSDfZB21tzq+5m55nnwaPr6iQIDAQAB"
+  },
+  "aarki": {
+    "appId": "4077CF1BF6DD0D01AA",
+    "openInExternalBrowser": "true"
+  },
+  "mdotm": {},
+  "sponsorpay": {
+    "appId": "7962"
+  },
+  "flurry": {
+    "DEBUG": false,
+    "rewards": {
+      "appCircle": {
+        "title": "Free Gems",
+        "currency": "Gems",
+        "message": "Earn 14 Gems by installing offer!",
+        "points": 14
+      },
+      "default": {
+        "currency": "Gems",
+        "image": "",
+        "points": 1
+      }
+    },
+    "apiKey": "KP8WBJRRNHZQH98GT9NF"
+  },
+  "w3i": {
+    "publisherId": "12103",
+    "debug": false,
+    "asyncLoading": false,
+    "offerwallName": "Free Gems",
+    "appId": "12103"
+  },
+  "chartboost": {
+    "appId": "5090faed17ba47d55e000033",
+    "appSecret": "57a5adf9800842cabeb9cd71094c4e3ada98d542"
+  },
+  "muneris": {
+    "plugins": {
+      "envars": {
+        "updateInterval": "30"
+      },
+      "inbox": {
+        "limit": "10"
+      },
+      "customersupport": {
+        "style": {
+          "margin": 10
+        }
+      },
+      "version": {
+        "criticalMessage": "Critical Update Available",
+        "autoCheck": true,
+        "message": "Updates",
+        "title": "Update Available",
+        "criticalTitle": "Critical Version update"
+      },
+      "offers": {
+        "messages": {
+          "title": "Free Gems"
+        },
+        "offeringItems": [
+          {
+            "zone": "offers",
+            "title": "Offer Wall"
+          }
+        ]
+      },
+      "mediation": {
+        "takeovers": {
+          "offers": {
+            "tapjoy:offerwall": 1,
+            "aarki": 1,
+            "w3i:offerwall": 1,
+            "sponsorpay": 2,
+            "flurry": 2
+          },
+          "takeovers": {
+            "tapjoy:featured": 0,
+            "chartboost": 1
+          }
+        },
+        "ads": {
+          "banner": {
+            "mopub": 1,
+            "tapjoy": 0
+          }
+        }
+      },
+      "analytics": {
+        "logSize": 100
+      },
+      "moreapps": {
+        "style": {
+          "borderWidth": 20,
+          "margin": 30
+        },
+        "enabled": true,
+        "baseUrl": "market://search?q=pub:Outblaze+Ventures",
+        "title": "More Apps from Us!",
+        "openInExternalBrowser": true
+      }
+    }
+  },
+  "mopub": {
+    "appId": "agltb3B1Yi1pbmNyDQsSBFNpdGUYq47GFgw",
+    "adUnitId": {
+      "320x50": "agltb3B1Yi1pbmNyDQsSBFNpdGUYq47GFgw",
+      "720x120": "agltb3B1Yi1pbmNyDQsSBFNpdGUYivHMFgw"
+    }
+  },
+  "tapjoy": {
+    "ppa": {
+      "mappings": {
+        "finishlevel3": "2572fae4-ac13-4c68-a0ae-cd351bf23d69",
+        "playthenextday": "1a3e7829-9cbc-498c-87cf-70e30e26799d",
+        "playon3rdday": "e2e6690c-b2c5-4843-95be-661749d6cb4b",
+        "playon4thday": "8a4d018b-526e-4147-ba84-9a881d4bccd2"
+      }
+    },
+    "debug": false,
+    "videoCount": 1,
+    "cacheVideo": true,
+    "appId": "acd01aa3-04f3-4a40-bae5-21affbf9bf86",
+    "appSecret": "cQWKWp5HgYZuKGZQLAa0"
+  }
+}

@@ -1,0 +1,1462 @@
+<GameData>
+	<Icons>
+		<Icon name="hero" texture="hero"/>
+		<Icon name="father_thiltran" texture="thiltran"/>
+		<Icon name="reaper" texture="quest1_reaper"/>
+		<Icon name="big_reaper" texture="big_reaper"/>
+		<Icon name="kathia" texture="kathia_steel"/>
+		<Icon name="demonic_lord" texture="demonic_lord"/>
+		<Icon name="demonic_lord2" texture="demonic_lord2"/>
+		<Icon name="nessa" texture="nessa"/>
+		<Icon name="elf_warrior" texture="elf_warrior"/>
+		<Icon name="werewolf" texture="werewolf"/>
+		<Icon name="green_darkness" texture="green_darkness"/>
+		<Icon name="ariki" texture="ariki"/>
+		<Icon name="arikis_son" texture="arikis_son"/>
+		<Icon name="skeleton_pirate" texture="skeleton_pirate"/>
+		<Icon name="blood_steel" texture="blood_steel"/>
+		<Icon name="kraken" texture="kraken"/>
+		<Icon name="imp" texture="imp"/>
+		<Icon name="aurora" texture="aurora"/>
+		<Icon name="executioner" texture="executioner"/>
+		<Icon name="lava_golem" texture="lava_golem"/>
+		<Icon name="magma_fenix" texture="magma_fenix"/>
+		<Icon name="moai" texture="moai"/>
+		<Icon name="impaler" texture="impaler"/>
+		<Icon name="oldman" texture="oldman"/>
+		<Icon name="town1_blacksmith" texture="town1_blacksmith"/>
+		<Icon name="town1_merchant" texture="town1_merchant"/>
+		<Icon name="town1_swordmaster" texture="town1_swordmaster"/>
+		<Icon name="town2_blacksmith" texture="town2_blacksmith"/>
+		<Icon name="town2_merchant" texture="town2_merchant"/>
+		<Icon name="town2_swordmaster" texture="town2_swordmaster"/>
+		<Icon name="town3_blacksmith" texture="town3_blacksmith"/>
+		<Icon name="town3_merchant" texture="town3_merchant"/>
+		<Icon name="town3_swordmaster" texture="town3_swordmaster"/>
+		<Icon name="town4_blacksmith" texture="town4_blacksmith"/>
+		<Icon name="town4_merchant" texture="town4_merchant"/>
+		<Icon name="town4_swordmaster" texture="town4_swordmaster"/>
+		<Icon name="town5_blacksmith" texture="town5_blacksmith"/>
+		<Icon name="town5_merchant" texture="town5_merchant"/>
+		<Icon name="town5_swordmaster" texture="town5_swordmaster"/>
+	</Icons>
+	<Dialogs>
+		<!--
+		message template
+		<Dialog name="">
+			<Message leftIcon="" rightIcon="" sender="" senderalignment="right"></Message>
+			<Event name=""/>
+		</Dialog>
+		after adding sender=" at the beginning of each line do regexp
+		replace:
+		sender="([0-9A-Za-z\ \x28\x29\.\-\_\á\é\í\ó\ú\,\'\´\!\?\¡\¿\’]*)\t([0-9A-Za-z\ \x28\x29\t\.\-\_\á\é\í\ó\ú\,\'\´\!\?\¡\¿\’]*)
+		for
+		<Message leftIcon="hero" rightIcon="" sender="\1" senderalignment="right">\2</Message>	
+		-->
+		<Dialog name="Quest1/BeginCinematic">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">I'm back. Did someone try to kill me? </Message>
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">And this place... it looks familiar to me. </Message>
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">I have an armor... mine?</Message>
+			<Message leftIcon="hero" rightIcon="reaper" sender="Reaper" senderalignment="right">You're Sigmus! Our great General! Where have you been? Don't you remember us?</Message>
+			<Message leftIcon="hero" rightIcon="reaper" sender="Sigmus" senderalignment="left">Damn you, liar demon.  Die!</Message>
+			<Event name="Tutorial_1_Event"/>
+		</Dialog>
+		<Dialog name="Quest1/AfterFirstWave">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">Why is this feeling so familiar...?</Message>
+			<Event name="Tutorial_2_Event"/>
+		</Dialog>
+		<Dialog name="Quest2/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Sigmus please! Help me! I'm injured!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Do you know me? Do you know anything? Tell me!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">What?!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">If you save me I'll tell you everything I know.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Ok then, start talking...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">I need 10 laurelius leaves from the Graveyard to cure myself.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">But first you'll have to kill the monsters who guard them.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<Dialog name="Quest2/End">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Thanks, you've saved me.</Message>
+		</Dialog>
+		<Dialog name="Quest3/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">OK Sigmus, while I cure my injuries... Do you remember Aurora?</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Aurora? She is... my lover. Where is she?</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">She sacrificed her soul to release yours. She used the Diamond Soul's Dagger.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">She's alive? Tell me where she is!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">If you came back to life, You probably made an arrangement to rescue her.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">If the legend is true you must destroy the dagger and release her soul.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Then... give it to me!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">I can't. An ally of Demonic Lord came and took the dagger and her body.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">You should go and look for it in the Graveyard!</Message>
+			<Event name="TakeItemFromInventory" item="QuestItems/Herb1" ammount="10"/>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<Dialog name="Quest3/BeginCinematic">			
+			<Message leftIcon="hero" rightIcon="big_reaper" sender="Reaper Lieutenant" senderalignment="right">What are you doing here?! You are our leader!</Message>
+			<Message leftIcon="hero" rightIcon="big_reaper" sender="Sigmus" senderalignment="left">I'm nobody's leader. Give me back the Diamond Soul and Aurora!</Message>
+			<Message leftIcon="hero" rightIcon="big_reaper" sender="Reaper Lieutenant" senderalignment="right">I always knew that a poor human like you could never be a true leader.</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<Dialog name="Quest3/AfterDefeatBigReaper">
+			<Message leftIcon="hero" rightIcon="big_reaper" sender="Sigmus" senderalignment="left">Now give me the dagger!</Message>
+			<Message leftIcon="hero" rightIcon="big_reaper" sender="Reaper Lieutenant" senderalignment="right">Haha, it's too late. Our Lord already has the Diamond Soul and also Aurora's body.</Message>
+			<Event name="CallFinallyDie"/>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!--QUEST 4	-->
+		<Dialog name="Quest4/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">I couldn't rescue her...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Don't worry, soon you will have a second chance...</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Father Thiltran! My informants saw Demonic Lord in the north sector of the Sanctuary Town.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Also, who's your new friend?</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Sigmus, she is the General of the ally forces.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">And with her you can have your biggest oportunity!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Yes Father.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!--At the graveyard. Sigmus is in front of Demonic Lord.	-->
+		<Dialog name="Quest4/BeginCinematic">
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">You... my right hand, my greatest warrior. A traitor! And just for that foolishness called love. You’re despicable.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Sigmus" senderalignment="left">Who are you? Do you know me?</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">I see. Those old men erased your memory, but not your essence. You fought by my side, for a great cause.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">Now you're fighting for a woman's body. What an insignificant thing... I gave you all your power!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">I turned you into the greatest warrior!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">Now come, and defeat me!... If you can. Traitor.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Sigmus" senderalignment="left">You're talking too much.</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<Dialog name="Quest4/AfterDefeatingDemonicLord">
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">And you call this a fight? You’re not even the seed of the oak you used to be.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">The Light Warriors have left you as a weak farmer.</Message>
+			<Event name="CallFinallyDie"/>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!--
+			CAPÍTULO II	
+			QUEST 5	
+		-->
+		<Dialog name="Quest5/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">I couldn't rescue her... and his words... I don't understand what's going on.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Sigmus, you were the darkest warrior of Demonic Lord, sending darkness everywhere.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">All because Demonic Lord cast a spell on you...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">...so you will live as long as your rage exists.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">I see you're still a great warrior and now you fight against your old master.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">I want you in my army.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">Ok... for Aurora.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Let's start right now.</Message>			
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">We have to bring some herbs to Father Thiltran to make more potions for our warriors.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus collects materials -->
+		<Dialog name="Quest5/End">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Here you have your materials...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Thanks. Please take the potions and take them to Oblivion’s Forest.</Message>
+			<Event name="UnlockWorldMapNavigation"/>
+			<Event name="UnlockTown" town="1"/>
+			<Event name="CloseQuest"/>
+		</Dialog>
+		<!-- QUEST 6 -->
+		<Dialog name="Quest6/Start">
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">Queen Nessa Faelivrin, here you have your potions.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Give my gratitude to Thiltran...</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">...</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">So you are our new warrior... I heard you've lost your memories, but let me remind you something.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">You killed my King. So don't expect that I'll trust you.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">The only reason keeping you alive in my lands is Thiltran. He gave me his word about you and your abilities.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">Those were other times, I was different... Now my only wish is to defeat Demonic Lord.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Prove it.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Go and release my royal guard from the demons.</Message>
+			<Event name="TakeItemFromInventory" item="QuestItems/Herb1" ammount="10"/>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus fights -->
+		<Dialog name="Quest6/SelfThought">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">There is something in the shadows... Am I really doing the right thing?</Message>
+		</Dialog>
+		<!-- After rescued the warriors	-->
+		<Dialog name="Quest6/RescueElf">
+			<Message leftIcon="hero" rightIcon="elf_warrior" sender="Elf soldier" senderalignment="right">You're Sigmus the Heartless. Will you be my killer?</Message>
+			<Message leftIcon="hero" rightIcon="elf_warrior" sender="Sigmus" senderalignment="left">Just run and escape... while you can.</Message>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+		</Dialog>
+		<!-- QUEST 7 -->
+		<Dialog name="Quest7/Start">
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Good work warrior.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Oh... Kathia!  What happened?</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">My Queen! We were fighting for three days against a werewolf in the woods!</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">We couldn't beat it!</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Sigmus, it's time to prove your loyalty.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Go and defeat the werewolf, and you'll show us that you're on our side.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">I'll do it. But not for you. I'll do it for my real mission.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus fights with demons until arrives to the werewolf -->
+		<Dialog name="Quest7/WerewolfDialog">
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Werewolf" senderalignment="right">Bastard! Don't you remember that you guided me to the battle? That we fought together?!</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Sigmus" senderalignment="left">I don't remember having fought beside a nasty lapdog.</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Werewolf" senderalignment="right">So, it's true...</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Werewolf" senderalignment="right">Don't you remember that you taught me to fight and use magic?</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Werewolf" senderalignment="right">Don't you remember that you taught me to appreciate the taste of the blood?!</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Werewolf" senderalignment="right">Together we found Aurora, after  killing her entire family!</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Sigmus" senderalignment="left">Shut your stinking muzzle! You liar!</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Werewolf" senderalignment="right">You have changed... now I'll be stronger by tasting your blood.</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Sigmus" senderalignment="left">You could never be stronger.</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!-- They fight. Sigmus wins -->
+		<Dialog name="Quest7/AfterDefeatingWerewolf">
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Werewolf" senderalignment="right">You're even capable to end with me... Aurora truly damaged you.</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Sigmus" senderalignment="left">Why did you say that?! Answer the question!</Message>
+			<Message leftIcon="hero" rightIcon="werewolf" sender="Werewolf" senderalignment="right">Aaaarghh!!!!</Message>
+			<Event name="CallFinallyDie"/>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!--
+			Werewolf dies	
+			QUEST 8	
+		-->
+		<Dialog name="Quest8/Start">
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">You surprised me Sigmus, maybe Thirtran is right about you.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">And speaking about Thiltran, I need you to give these to him, to make an antidote for our warriors.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">We've heard that one of the Five Dark Generals is near.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">Dark Generals?</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Yes, the elite of Demonic Lord's army, trained by him...</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">...and you.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">Damn it! So much that I can't remember... Ok, give me the herbs.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Be careful, the Dark Generals are not the only menace in your way.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!--QUEST 9	-->		
+		<Dialog name="Quest9/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Oh! You're still alive.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Thank you for the herbs. I'll do the antidote immediately. And how is you mission?</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">I'm confused, it looks like I've done terrible things, even to Aurora's family.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Aurora erased your dark past with her sacrifice, and that's why you have a new hope. A new life!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Your fight is a new chance to battle for the light.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">The light... the darkness... it's all the same crap.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Just tell me who those five Dark Generals are.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">One of them is near.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">The Green Darkness; this antidote is to fight against her poison.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">She's at Oblivion's Forest, go quickly.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<Dialog name="Quest9/GreenDarknessDialog">
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">We bump into each other again, Sigmus the Traitor. When I heard I couldn't believe it.</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">You, who escaped with this elf, Aurora...</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Sigmus" senderalignment="left">Don't say her name!</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">You know I was always a better warrior than she was... in everything.</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">Or have you forgotten the years we were together? Why didn't you choose me? </Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">And I even trained her to fight, for you... for love.  But it really seems that you've lost your memories.</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">Do you really believe that she's an angel? You taught her to kill! She's murderer because of you!</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">She's not better than us.</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">And Demonic Lord is very disappointed...</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">I'm really going to enjoy this! I'll enjoy smashing you into pieces!</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!-- They fight, Sigmus wins -->
+		<Dialog name="Quest9/AfterDefeatingGreenDarkness">
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">Damn you traitor, I should suppose it.</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Sigmus" senderalignment="left">Tell me where I can find Demonic Lord!</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">Even in my last moments you demand things of me...</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">I really loved you, but you never loved me back.</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">He is in his castle, but the Diamond Soul is guarded by the Kraken.</Message>
+			<Message leftIcon="hero" rightIcon="green_darkness" sender="Green Darkness" senderalignment="right">You know how he loooks like. Please be careful, my love...</Message>
+			<Event name="CallOnDie"/>
+		</Dialog>
+		<!--
+			Green Darkness dies	
+			CAPÍTULO III	
+			QUEST 10	
+		-->
+		<Dialog name="Quest10/Start">
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">I already defeated Green Darkness. Anyway, here's your antidote.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left"> I don't care if you trust me. I always carry out my promises.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">I believe in you Sigmus...</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Our army is surrounded in the beach! My second-in-command is there!</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Quest 10, after the fight on the beach	-->
+		<Dialog name="Quest10/End">
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">Kathia, I need to know where the Kraken is.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">He is on Stone Man's Island. Why do you want to know that?</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">Because he has the Diamond Soul Dagger.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">How did you know it?</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">A dear friend told me...</Message>
+			<Event name="CloseQuest"/>
+			<Event name="UnlockTown" town="2"/>
+			<Event name="CloseQuest"/>
+		</Dialog>
+		<!-- Quest 11 -->
+		<Dialog name="Quest11/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">I can't believe that you're here, Sigmus.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Sigmus the Destructor, and now the Savior...</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">How ironic.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Without the Queen's request, you couldn't put a foot on my Island.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Do you remember what you did here?</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Sigmus" senderalignment="left">Everyone ask me the same thing... and I can't remember anything.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">This is Aurora's homeland. She's my niece.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">You murdered my sister, pretending to hurt my leadership.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Sigmus" senderalignment="left">Those were other times. Now both of us want Aurora back.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">We'll see that...</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">I have troubles in the south side of the Island, and I would like to see it clean.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">I heard that you're looking for the Kraken. If you do what I'm asking for I'll tell you where it is.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Quest 12 -->
+		<Dialog name="Quest12/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Sigmus! The pirates have taken my wife and my only heir! Rescue them!</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">If you do it I'll tell you some important information about Aurora.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Sigmus" senderalignment="left">Tell me now!</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">No, first rescue them...</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus fights again in other beach -->
+		<Dialog name="Quest12/AfterKillingPirate">
+			<Message leftIcon="hero" rightIcon="skeleton_pirate" sender="Pirate" senderalignment="right">You're late.</Message>
+			<Message leftIcon="hero" rightIcon="skeleton_pirate" sender="Pirate" senderalignment="right">Our boss already killed Hotu's wife, and kidnapped his son to offer him to Demonic Lord.</Message>
+			<Message leftIcon="hero" rightIcon="skeleton_pirate" sender="Pirate" senderalignment="right">You'll never catch him! Hahaha!</Message>
+			<Event name="CallFinallyDie"/>
+		</Dialog>
+		<!--
+			Sigmus kills him
+			Quest 13
+		-->
+		<Dialog name="Quest13/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Sigmus" senderalignment="left">I'm sorry. It's too late for your wife, but your son has been captured by the pirate Blood Steel.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Sigmus" senderalignment="left"> I'll rescue him, but then you have to tell me where the Kraken is.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">I give you my word. Just rescue my son...</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- At Blood Steel hideout	-->
+		<Dialog name="Quest13/BloodSteelDialog">
+			<Message leftIcon="hero" rightIcon="blood_steel" sender="Blood Steel" senderalignment="right">Haha, you're late for the woman, and maybe also for the kid.</Message>
+			<Message leftIcon="hero" rightIcon="blood_steel" sender="Blood Steel" senderalignment="right">Do you know that he's Aurora's cousin?</Message>
+			<Message leftIcon="hero" rightIcon="blood_steel" sender="Blood Steel" senderalignment="right">I heard you were the best of all... But that title will be mine when I kill you!</Message>
+			<Message leftIcon="hero" rightIcon="blood_steel" sender="Sigmus" senderalignment="left">Huge words for someone so insignificant.</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!-- They fight. Sigmus wins -->
+		<Dialog name="Quest13/AfterDefeatingBloodSteel">
+			<Message leftIcon="hero" rightIcon="blood_steel" sender="Blood Steel" senderalignment="right">You'll be surprised to know how different Aurora is now... It was a real pleasure bringing her to Demonic Lord.</Message>
+			<Message leftIcon="hero" rightIcon="blood_steel" sender="Blood Steel" senderalignment="right">Hahaha, you have to ask him how did he turn her into something so delicious.</Message>
+			<Event name="CallFinallyDie"/>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!--
+			Blood Steel dies	
+			Quest 14/ 15 / 16
+		-->
+		<Dialog name="Quest14/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Thank you for saving my son!</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">We know where the Kraken is, but he is with a huge army.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Looks like they're guarding something... something important</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Sigmus" senderalignment="left">Yes, my beloved one's salvation...</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">To reach the Kraken's lair, you have to open three gates.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">And to open them you must destroy their black magic totems, that are on the East, West and North of the island.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Quest 14/ after destroy the first totem -->
+		<Dialog name="Quest14/AfterDestroyingTotem">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">I'm getting closer.</Message>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+		</Dialog>		
+		<Dialog name="Quest15/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Good! The second totem is on the West area. Be careful.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Quest 15/ After destroy the second Totem -->
+		<Dialog name="Quest15/AfterDestroyingTotem">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">Soon the Diamond Soul Dagger will be in my hands.</Message>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>			
+		</Dialog>		
+		<Dialog name="Quest16/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">You only need one more. It's in the North. Good Luck!</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Quest 16/ After destroy the 3rd totem -->
+		<Dialog name="Quest16/AfterDestroyingTotem">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">Ok I destroyed all the totems. Kraken... be prepared.</Message>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>			
+		</Dialog>		
+		<Dialog name="Quest17/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">That was the last one. You're ready to face the Kraken.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">But be careful with the dark powers, they could be tempting.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Quest 17 -->
+		<Dialog name="Quest17/BeginCinematic">
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">Sigmus, my child, my disciple... ¿Do you remember?</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Sigmus" senderalignment="left">Disciple? Damn octopus...</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">I taught you to fight. Demonic Lord himself gave me that mission.</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">In fact, it was me who separated you from your family.</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">Damn you, Sigmus, Demonic Lord raised you like a son...</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">Someone who is born in light always belongs to it. I told him a thousand times!</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">But Demonic Lord always believed that you would be a great general...</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">It doesn't matter that you were born in the Light Warriors' House.</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Sigmus" senderalignment="left">You're mumbling nonsenses...  I just want the dagger.</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">Hahaha! This one? If you can remember my lessons maybe you can have it.</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<Dialog name="Quest17/AfterDefeatingFirstTentacles">
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">Not so fast! this is just the beginning...</Message>
+		</Dialog>
+		<!-- Quest 17, after fighting with the Kraken -->
+		<Dialog name="Quest17/AfterDefeatingKraken">
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">Damn you and your descendants, Sigmus... I taught you well... maybe too much.</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">Here's your dagger, but you'll be surprised to know what my Master does with your woman.</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Sigmus" senderalignment="left">Liar!</Message>
+			<Message leftIcon="hero" rightIcon="kraken" sender="Kraken" senderalignment="right">Get prepared for a big surprise! Hahaha!</Message>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+		</Dialog>
+		<!--
+			Kraken dies
+			CAPÍTULO IV	
+			QUEST 18
+		-->
+		<Dialog name="Quest18/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">I see you have the dagger. Now what?</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Sigmus" senderalignment="left">I have to find Aurora... do you know anything?</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">No, but maybe my son knows something...</Message>
+			<Message leftIcon="hero" rightIcon="arikis_son" sender="Ariki's son" senderalignment="right">I only heard that on the West side of the Island there were warriors talking about her...</Message>
+			<Message leftIcon="hero" rightIcon="arikis_son" sender="Ariki's son" senderalignment="right">They said that she's not the same anymore.</Message>
+			<Message leftIcon="hero" rightIcon="arikis_son" sender="Ariki's son" senderalignment="right">Maybe you can go there and find out something else.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus goes to the other side of the Island, and fights -->
+		<Dialog name="Quest18/AfterDefeatingImp">
+			<Message leftIcon="hero" rightIcon="imp" sender="Sigmus" senderalignment="left">Damn you demons, you know something about Aurora! Tell me!</Message>
+			<Message leftIcon="hero" rightIcon="imp" sender="Imp" senderalignment="right">Please don't kill me, I'll tell you everything I know, but please don't hurt me.</Message>
+			<Message leftIcon="hero" rightIcon="imp" sender="Sigmus" senderalignment="left">OK, pest, tell me.</Message>
+			<Message leftIcon="hero" rightIcon="imp" sender="Imp" senderalignment="right">She's on Volcano Higlands! Nooo! Arghh!</Message>
+			<Event name="CallFinallyDie"/>
+		</Dialog>
+		<!--
+			Sigmus kills him
+			Quest 19
+		-->
+		<Dialog name="Quest19/Start">
+			<Message leftIcon="hero" rightIcon="ariki" sender="Sigmus" senderalignment="left">I know where Aurora is. She's trapped in Volcano Higlands.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Then you'll have to increase your power.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">No one can access that city directly. To get into it you have to go back to Oblivion's Forest.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Queen Nessa put a barrier between both cities.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Only with her spell you can cross over to Volcano Higlands.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">Be careful, lately the forest has been under continuous magma demons attacks.</Message>
+			<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">And you'll probably encounter them.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!--
+			In the road to Oblivion's Forest, Sigmus figths		
+			Quest 20
+		-->
+		<Dialog name="Quest20/Start">
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">You're back, Sigmus. Have you progressed in your crusade?</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">Yes. I have the dagger, but my loved one's body is at Volcano Highlands.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">I see. I blocked the pass to that city with a strong spell.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">To open it I'll need some magic zapphires. You can find them at the forest's borders, in the Northern area.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">You must be careful... the place is under the attack of fire demons.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">OK, I'll go for the stones.</Message>
+			<Event name="ShowAcceptQuestWindow"/>			
+		</Dialog>	
+		<!-- Quest 21 -->
+		<Dialog name="Quest21/Start">
+			<Message leftIcon="hero" rightIcon="nessa" sender="Sigmus" senderalignment="left">Queen Nessa, I found the zapphires, now you can start with the ritual.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Very good Sigmus. With this zapphires and using my energy, I've covered you with a special aura that will allow you to cross over.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">Be careful with the city's guardian, at the other side of the frontier.</Message>
+			<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">And once inside, trust no one. Darkness owns the place. Be careful.</Message>
+			<Event name="TakeItemFromInventory" item="QuestItems/Blue Zapphire" ammount="10"/>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Quest 21, after opening the gates -->
+		<Dialog name="Quest21/BeginCinematic">
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Lava Golem" senderalignment="right">Sigmus, is it true that you've changed? We are friends... do you remember me?</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Sigmus" senderalignment="left">Golem? My faithful Golem? Of course I remember you! I don't want to fight against you.</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Lava Golem" senderalignment="right">Sigmus! I knew you were still alive! Please stay away from me.</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Lava Golem" senderalignment="right">I'm under a witchcraft of Magma Phoenix. It forces me to fight, even against you...</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Sigmus" senderalignment="left">But there must be a solution... My faithful friend, you saved me so many times, this time i'll try to save you.</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!-- They fights, Sigmus wins -->
+		<Dialog name="Quest21/AfterDefeatingLavaGolem">
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Lava Golem" senderalignment="right">You defeated me Sigmus. Kill me now!</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Sigmus" senderalignment="left">No my friend. Take this rune from Queen Nessa Faelivrin.</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Sigmus" senderalignment="left">Once you pass the barrier, tell that you're my friend and they will protect you. No other dark creature will be able to cross over.</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Lava Golem" senderalignment="right">Thanks my friend. Before crossing let me tell you that Aurora isn't here.</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Lava Golem" senderalignment="right">But the city contains the gate to cross to the Lord's lands.</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Lava Golem" senderalignment="right">Just be very cautious, because to arrive there you'll have to defeat Magma Phoenix...</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Lava Golem" senderalignment="right">...and in the past you never could win her.</Message>
+			<Message leftIcon="hero" rightIcon="lava_golem" sender="Sigmus" senderalignment="left">Yes, but now I'm stronger. My energy comes from other feelings.</Message>			
+			<Event name="CloseQuest"/>
+			<Event name="UnlockTown" town="3"/>
+			<Event name="CloseQuest"/>
+		</Dialog>
+		<!-- Quest 22 -->
+		<Dialog name="Quest22/Start">
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Please get closer... you're just like an old friend.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">I think you're confusing me with somebody else...</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">It's true, you look like a great warrior, his name was Sigmus.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">I'm Sigmus!</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">You're not the Sigmus that i knew.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">He was the best Light Warrior, a skilled swordsman and unbeatable in the uses of magic.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">But everything changed when Demonic Lord kidnapped his pregnant wife.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Well, those  were other times... now, i see in your energy that you're the person that i was waiting for.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">You are Queen Nessa's envoy.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">Yes. I'm looking for the gate to the Land of the Fallen Angels.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">First you have to go to the volcano caves and get five crystals from the fire imps.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">It will allow me to open the dark barrier over the portal.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!--Sigmus fights against Fire Imp.	-->
+		<Dialog name="Quest22/SelfThought">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">So bizarre. The story fits with how Demonic Lord made me his warrior.</Message>
+		</Dialog>
+		<!--
+			Sigmus fights and take the stones 
+			Quest 23 
+		-->
+		<Dialog name="Quest23/Start">
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">Here are your crystals, now help me. But first...</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">...to which caste did your friend belong? When was that?</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old Man" senderalignment="right">Sigmus belongs to the purest caste of all... the Light Warriors. 400 years ago.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">But it's impossible, you cannot be alive!</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old Man" senderalignment="right">I'm one of the last members of the caste of the Light Warriors. We have the power to live forever.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old Man" senderalignment="right">The hope gives us the energy.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old Man" senderalignment="right">Now, Sigmus, go and defeat the frontier guardians to cross over it and defeat Magma Phoenix.</Message>
+			<Event name="TakeItemFromInventory" item="QuestItems/Red Ruby" ammount="10"/>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!--
+			Sigmus fights against the frontier warriors		
+			Quest 24
+		-->		
+		<Dialog name="Quest24/Start">
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">You fought like a true warrior, you remind me of my best friend.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">I can even see him in your eyes...</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Maybe the stories were true and Demonic Lord transformed you into his warrior.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">But not anymore. Now I'm fighting for my beloved one, who sacrificed herself to clean my soul.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Your father will be proud, you fight with his courage.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">I'll give you something important to us. Take this crystal.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">A crystal?</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">This is the Crystal of the Light Keepers. It allows you to communicate with every Light Warrior alive.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">I thought that you were the last one...</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Things aren't always what they seem, Sigmus...</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Think about Father Thiltran... he's an old comrade-in-arms of your father and mine.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">Thiltran! But how... when...</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Sigmus! I see you're still alive.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">And I see you're talking with this crazy man who no one could kill before.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Be careful with this woman, Sigmus...</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Shut up, looney!!!</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Arggghhhh!!</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">Why did you kill him?!</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">He's the only one that could tell me about my origins!</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Sigmus... have you really lost your memory? Don't you remember me?</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">I'll be waiting for you at the other side of the barrier that you destroyed.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">Come back here, damn girl!</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus goes to the barrier and fights against a lot of soldiers. Then face up to Magma Fenix -->		
+		<Dialog name="Quest24/MagmaPhoenixDialog">			
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">You're Magma Phoenix?! But you're the General of the resistance!</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">I'm also the Captain of the Demonic Lord's army, after your betrayal.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">What a bad memory you have...</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">But... why?</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Don't you think it's the best plan ever? The resistance couldn't win a battle for more than a hundred years!</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Do you imagine why?</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Because I guided them, Sigmus!</Message>
+			<Event name="ContinueGame"/>
+			<Event name="TransformMagmaPhoenix"/>
+		</Dialog>
+		<!-- They fight. Sigmus wins -->
+		<Dialog name="Quest24/AfterDefeatingMagmaPhoenix">
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">But how could you defeat me!</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">Because I'm a Light Warrior now, and hope make us stronger!</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">Now I know who I am, everything was a lie. Demonic Lord didn't give me the immortality.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Sigmus" senderalignment="left">The purest caste of Light Warriors, where I belong, is eternal. He just kidnapped me.</Message>
+			<Message leftIcon="hero" rightIcon="kathia" sender="Kathia Steel" senderalignment="right">Hope? When you find your beloved one, we'll see if you still have hopes...</Message>
+			<Event name="ContinueGame"/>
+			<Event name="CloseQuest"/>
+			<Event name="UnlockTown" town="4"/>
+			<Event name="CloseQuest"/>
+		</Dialog>
+		<!--
+			CAPÍTULO VI	
+			Quest 25
+		-->
+		<Dialog name="Quest25/Start">
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">You did it!</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">But how... I saw you die!</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Almost, but remember that hope gives us the strength and keep us alive.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Seeing you has renewed my hopes.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Your father will be proud, you're the last active Light Warrior.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">Thank you.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">You can cross the portal, but be careful, this is only the beginning. Those lands are full of black warriors.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus fights with dark warriors -->
+		<Dialog name="Quest25/SelfThought">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">My love, I'm getting closer. My anger has turned into hope...</Message>
+		</Dialog>
+		<!-- Quest 26 -->
+		<Dialog name="Quest26/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Sigmus... I see that my suppositions were true.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Thiltran, why didn't you tell me about my real father...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">I wasn't sure, it was many years ago...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">But now I am! You're a true Light Warrior!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">The gods accepted your title and sent you back from the dead.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">And Aurora's sacrifice...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">That was the purification that you needed to face that stage.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Now, keep going, but be careful. The last fights are nothing compared with the ones that will come.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus fights and founds the Executioner -->
+		<Dialog name="Quest26/BeginCinematic">
+			<Message leftIcon="hero" rightIcon="executioner" sender="Sigmus" senderalignment="left">Damn it Demon, you're really huge. But i'm gonna defeat you just like the others!</Message>
+			<Message leftIcon="hero" rightIcon="executioner" sender="Sigmus" senderalignment="left">Where is Demonic Lord?!</Message>
+			<Message leftIcon="hero" rightIcon="executioner" sender="Sigmus" senderalignment="left">Where is Aurora?! Tell me!</Message>
+			<Message leftIcon="hero" rightIcon="executioner" sender="Executioner" senderalignment="right">...</Message>
+			<Message leftIcon="hero" rightIcon="executioner" sender="Sigmus" senderalignment="left">You're just an abomination...</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!-- Sigmus and Executioner fight -->
+		<Dialog name="Quest26/AfterDefeatingExecutioner">
+			<Message leftIcon="hero" rightIcon="executioner" sender="Sigmus" senderalignment="left">Show me where Demonic Lord is!</Message>
+			<Message leftIcon="hero" rightIcon="executioner" sender="Executioner" senderalignment="right">Nooo, nooo light, just darkness... Aaarghh!</Message>
+			<Message leftIcon="hero" rightIcon="executioner" sender="Sigmus" senderalignment="left">You were nothing more than a guard dog...</Message>
+			<Event name="CallFinallyDie"/>
+		</Dialog>
+		<!-- Quest 27 -->
+		<Dialog name="Quest27/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Master, there's only darkness here. I don't know where I have to go. Have you been here before?</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">I just heard rumours, but...</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">People says that you always have to follow the darkest path.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">But be careful, nobody knows how many abominations you can find.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Wait, I've been here before... I'm starting to remember. I took this road many times before.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Be careful, my son. Remember that there it is the Great Impaler.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">People say that he's even stronger than Demonic Lord.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">I know where I have to go now...</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!--
+			Sigmus walks across the city and fights with soldiers	
+			Quest 28
+		-->
+		<Dialog name="Quest28/Start">
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">Master... I remember everything.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">I know where the Impaler is... he's a terrific warrior.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old Man" senderalignment="right">People say that he was the stronger Light Warrior.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old Man" senderalignment="right">Even your father, trying to rescue you, went to fight against Demonic Lord and was defeated by the Impaler.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Sigmus" senderalignment="left">Then, I'm not only avenging my beloved one, I will also seek revenge for my family.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old Man" senderalignment="right">That's right, my son. From now on we can't communicate anymore... be careful.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!-- Sigmus fights with a lot of warriors-->
+		<Dialog name="Quest28/BeginCinematic">
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">For many years no one could get here.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">For centuries no one wanted to fight against me.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Everyone who tried, is dead now.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Who are you to challenge me now?</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Sigmus" senderalignment="left">I'm Sigmus. I've never been here before, this part of the city was forbidden to me.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Sigmus? My Sigmus? It's impossible, he's dead.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">He was my son, and he was killed by Demonic Lord.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Looking for him I lost all hope, I even defeated the old Impaler.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">But Demonic Lord took my anger and transformed me into...</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">...this. A creature of death. That's why I'll kill you, for pretending to be my son!</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!-- Sigmus and Impaler fights... Sigmus wins -->
+		<Dialog name="Quest28/AfterDefeatingImpaler">
+			<Message leftIcon="hero" rightIcon="impaler" sender="Sigmus" senderalignment="left">Listen to me... I'm Sigmus, the last Light Warrior.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Sigmus" senderalignment="left">You're still a great warrior, but instead of you I never lost my hope.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Sigmus? Is it really you?</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Forgive me, I'm ashamed of myself. Look what I've become.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Please end with this body. I'm already dead. This is only flesh and dark magic.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Sigmus" senderalignment="left">Father, I'll take care of releasing you... and the world will know that you were a great Light Warrior.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Sigmus" senderalignment="left">I will never give up.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Sigmus" senderalignment="left">Now just... rest in peace.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Thank you... Son.</Message>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>			
+		</Dialog>
+		<!--
+			Impaler dies	
+			Capítulo VI	
+			Quest 29	
+		-->
+		<Dialog name="Quest29/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">I defeated the Impaler.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Demonic Lord used the last energy and strength of a great Light Warrior.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">He used him for his dark purposes.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Just because the warrior lost his hope.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">So, he really was a Light Warrior. Do you know who was he?</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">I didn't know him. But in the end he acted like a great person.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">So... What will you do now?</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">I'm getting into the castle.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Good luck! You must have faith and courage, my son.</Message>
+			<Event name="ShowAcceptQuestWindow"/>
+		</Dialog>
+		<!--
+			Sigmus fights against warriors and enter into the castle. There finds Aurora.		
+			Quest 30
+		-->
+		
+		<Dialog name="Quest30/Start">
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Sigmus, if you feel strong enough to face Demonic Lord, I'll give you my blessing for this fight.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Don't fall for his tricks, as he'll try to trick you back to his side.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Also, remember you're one of the greatest Light Warrior. You have hope in your heart.</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Sigmus" senderalignment="left">Thanks Father, I will not forget. I must not forget!</Message>
+			<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Go ahead then, and rescue your wife. Good luck in this last fight.</Message>
+			<Event name="ShowAcceptQuestWindow"/>			
+		</Dialog>
+		
+		<Dialog name="Quest30/BeginCinematic">
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">Sigmus! How dare you come here...</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">Aurora!</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">My love, I came here to rescue you!</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">I don't need to be rescued, my lover already did.</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">Demonic Lord took my soul and gave me a new reason...</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">Now the taste of blood guides me. You were just a little sample of his power!</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">Now I see it... he's my real love, my master. I wasted my time with you.</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">Aurora, if your soul still resists inside, please...</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">...tell me something. Tell me that you're still alive, and I'll have the courage to fight for you.</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">Sigmus... I don't know what happened to me... help me... I'm changing. We have no time!</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">Please defeat me and vanquish that Demonic Lord!</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">...What? What am I saying? Damn you, you're confusing me! Let's fight!</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">For your soul...</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!--They fight. Sigmus wins	-->
+		<Dialog name="Quest30/AfterDefeatingAurora">
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">Now it's my chance... I'll use the dagger!</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">Damn you, you defeated me! No! What are you doing?! Drop the dagger! No!</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">Arghhh!!!</Message>
+			<!--
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">But... Aurora! What happened! Noooo!</Message>
+			-->
+			<Event name="LoadLevelAdditive" levelName="endchapter5"/>
+		</Dialog>
+		<!--
+			Aurora dies		
+			Quest 30, part b. After Aurora's dead	
+		-->
+		<Dialog name="Quest31/BeginCinematic">
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">Ha! Everyone believes that this dagger would release her soul. The truth is...</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">...you're just killing her! Hahahaha!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">The dagger is only for the Light Warrior's transformation ritual.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">It doesn't work on other races.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">I'm afraid you're killing your wife, Sigmus.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">With your own hands!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Sigmus" senderalignment="left">You did all of this!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">Of course I did!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">I dressed up one of my slaves and made the story arrive to Aurora.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">You're just one of my puppets in this world.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Sigmus" senderalignment="left">Swine!</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Sigmus! Oh, I see... I can see across the crystal that everything was a lie.</Message>
+			<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Oh, Wait! Here is someone who wants to talk to you.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Son, get focused, don't fall into Demonic Lord's game.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">It's true that you've been deceived...</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">...but this is your chance to turn yourself into a true Light Warrior.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Sigmus" senderalignment="left">What are you talking about, father?!</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">You're the only one who really knows about Demonic Lord. Use your anger as energy.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Look inside. Aurora's soul is still here, feel it. Calm down.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">Shut up! You weren't even good enough as my guardian!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">Stop talking nonsenses!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Sigmus" senderalignment="left">Wait, you're right. I actually feel an energy around Aurora... I have a chance.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Sigmus" senderalignment="left">Demonic Lord, I'll destroy you!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Sigmus" senderalignment="left">I won't let this happen again!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">Insolent pupil! Do you want to try again? Hahaha!</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!--
+			Sigmus defeats Demonic Lord	
+			Quest 30, part c, after defeats Demonic Lord
+		-->
+		<Dialog name="Quest31/BeginDemonicLordTransformation">
+			<Message leftIcon="hero" rightIcon="demonic_lord" sender="Demonic Lord" senderalignment="right">Hahaha, that was just my first level. Just a small part of my strength.</Message>
+			<Event name="TransformDemonicLord"/>
+		</Dialog>
+		<!--Se muestra una evolución de poder en Demonic Lord	-->
+		<Dialog name="Quest31/EndDemonicLordTransformation">
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Demonic Lord" senderalignment="right">This is my real power! You're just a light worm! Taste my real force!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Sigmus" senderalignment="left">You're just talking from fear.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Sigmus" senderalignment="left">You're afraid of me because I'm taking with me all the Light Warriors' power.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Sigmus" senderalignment="left">And the hope of my beloved one's soul!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Sigmus" senderalignment="left">Die!</Message>
+			<Event name="ContinueGame"/>
+		</Dialog>
+		<!--They fight again. Sigmus wins	-->	
+		<Dialog name="Quest31/DemonicLordDeathDialog">
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Demonic Lord" senderalignment="right">Hahaha, by killing me you just saved your lover's soul.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Demonic Lord" senderalignment="right">But with all my power, I'm just the third soul of my master.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Demonic Lord" senderalignment="right">And there is no Light warrior or darkest one who can defeat his second soul or him.</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Demonic Lord" senderalignment="right">You're only an ant in his world. Take the elven soul...</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Demonic Lord" senderalignment="right">...it will be useless in her destroyed body!!!</Message>
+			<Message leftIcon="hero" rightIcon="demonic_lord2" sender="Demonic Lord" senderalignment="right">Hahaha! Arggghhh!</Message>
+			<Event name="CallFinallyDie"/>
+		</Dialog>
+		<!--Demonic Lord dies	-->	
+		<Dialog name="Quest31/AuroraHealingDialog">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">Auroraaaaa!</Message>
+			<Event name="GameOver"/>
+		</Dialog>			
+		<!--
+		<Dialog name="Quest31/AuroraHealingDialog">
+			<Message leftIcon="hero" sender="Sigmus" senderalignment="left">Auroraaaaa!</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">My son, I have no time left to talk through the magic crystal of the Old Man.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">Congratulations my son, I'm proud of you.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">With my last breath I'll transfer you all my energy.</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">With this, you will be the purest and strongest Light Warrior, and you'll add another ability...</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Impaler" senderalignment="right">...the healing power!</Message>
+			<Message leftIcon="hero" rightIcon="impaler" sender="Sigmus" senderalignment="left">Father! Thank you!</Message>
+			<Event name="AuroraHealing"/>
+		</Dialog>
+		-->
+		<!--A white light inundates the entire room. When it goes, Aurora is in front of Sigmus	-->	
+		<!--
+		<Dialog name="Quest31/GameOverDialog">
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">My love, you saved me. Deep inside I never doubted. Please forgive me for everything.</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">No, you forgive me. I could never live without you...</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Aurora" senderalignment="right">But... what are we going to do now?</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">The only thing that we both do well...</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">...keep on fighting. But now we shall rebuild everything we destroyed in the past.</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">Honoring the Light Warriors.</Message>
+			<Message leftIcon="hero" rightIcon="aurora" sender="Sigmus" senderalignment="left">Until we defeat the real Lord of the Avernus.</Message>
+			<Event name="GameOver"/>
+		</Dialog>
+		-->
+	<!--
+		Epílogo	
+		Narrador	Sigmus and Aurora kept fighting for years, trying to release every land from the forces of darkness.  It isn't an easy quest, but now, Sigmus, transformed into the greatest Light Warrior of all... can serve to his duty side by side with his beloved one... Aurora.
+		Lord of the Avernus silhouette appears	
+		Lord of the Avernus  	Hahahaha, so this Sigmus isn't the worm I thought before... A Light Warrior. He has no clue of what is waiting for him. Rest now Sigmus, because you'll be destroyed... ...by those who you believe were your allies!
+	-->	
+	
+		<Dialog name="QuestEasterEgg/Start">
+			<Message leftIcon="hero" rightIcon="moai" sender="Moai" senderalignment="right">Okay, okay, you discovered me.</Message>
+			<Message leftIcon="hero" rightIcon="moai" sender="Moai" senderalignment="right">I heard that near this village, a fellow soldier from Nano Kingdoms was trapped by monsters.</Message>
+			<Message leftIcon="hero" rightIcon="moai" sender="Moai" senderalignment="right">Will you help him?</Message>
+			<Event name="StartEasterQuest"/>
+		</Dialog>
+	</Dialogs>
+	<Quests>
+		<Quest name="Quest1" title="Sigmus, Our General" background="Scene/Cemetery/Cemetery1" town="town1" award="500" music="cemetery">
+			<Award item="Consumables/Berserk" min="1" max="1" alwaysAward="true"/>
+			<Award item="Boots/adept_Boot" min="1" max="1" alwaysAward="true"/>
+			<KillQuest enemy="Bat" ammount="12" percentageToBegin="0"/>
+			<KillQuest enemy="reaper" ammount="7" percentageToBegin="20"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="Quest1CinematicBegin" trigger="begin"/>
+			<Cinematic name="Quest1AfterFirstWave" trigger="AtEnemiesKilled" numEnemies="3"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest2" title="Father Thiltran" startDialog="Quest2/Start" background="Scene/Cemetery/Cemetery2" award="950" town="town1" music="cemetery">
+			<Award item="Consumables/HealingPotion" min="3" max="7"/>
+			<Award item="Consumables/ManaPotion" min="1" max="2"/>
+			<Award item="Shields/adept_Shield" min="1" max="1"/>
+			<Award item="Armors/adept_Armor" min="1" max="1"/>
+			<KillQuest enemy="Bat" ammount="10" percentageToBegin="0"/>
+			<KillQuest enemy="reaper" ammount="5" percentageToBegin="0"/>
+			<KillQuest enemy="Eye_Ghost" ammount="3" percentageToBegin="0"/>
+			<LootQuest enemy="Bat" ammount="4" item="QuestItems/Herb1"/>
+			<LootQuest enemy="reaper" ammount="3" item="QuestItems/Herb1"/>
+			<LootQuest enemy="Eye_Ghost" ammount="3" item="QuestItems/Herb1"/>
+			<Dependency name="Quest1"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+		</Quest>
+		<Quest name="Quest3" title="The Reaper" startDialog="Quest3/Start" background="Scene/Cemetery/Cemetery3" town="town1" award="1300" music="cemetery">
+			<Award item="Consumables/HealingPotion" min="3" max="7"/>
+			<Award item="Consumables/ManaPotion" min="1" max="2"/>
+			<Award item="Armors/adept_Armor" min="1" max="1"/>
+			<Award item="Shields/adept_Shield" min="1" max="1"/>
+			<KillQuest enemy="BigReaper" ammount="1" percentageToBegin="0"/>
+			<Cinematic name="Quest3CinematicBegin" trigger="begin"/>
+			<Dependency name="Quest2"/>			
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Event name="CompleteTapjoyPPA" AndroidActionId="2572fae4-ac13-4c68-a0ae-cd351bf23d69" iOSActionId="a9178521-8cf2-41e0-b92e-58092dedbe6a"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest4" title="Demonic Lord" startDialog="Quest4/Start" background="Scene/Sanctuary/Sanctuary1" town="town1" award="1800" music="sanctuary">
+			<Award item="Consumables/HealingPotion" min="3" max="7"/>
+			<Award item="Consumables/ManaPotion" min="1" max="2"/>
+			<Award item="Weapons/acolyte_Sword" min="1" max="1"/>
+			<Award item="Boots/acolyte_Boot" min="1" max="1"/>	
+			<KillQuest enemy="Demonic_lord1" ammount="1" percentageToBegin="0"/>
+			<Dependency name="Quest3"/>
+			<Cinematic name="Quest4CinematicBegin" trigger="begin"/>
+			<Cinematic name="Quest4AfterDefeatingDemonicLord" trigger="AtEnemiesKilled" numEnemies="1"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest5" title="Kathia's Army" startDialog="Quest5/Start" background="Scene/Forest/Forest1" town="town1" award="1600" music="forest">
+			<Award item="Consumables/HealingPotion" min="4" max="7"/>
+			<Award item="Consumables/ManaPotion" min="2" max="4"/>
+			<Award item="Weapons/acolyte_Sword" min="1" max="2"/>
+			<Award item="Shields/adept_Shield" min="1" max="1"/>	
+			<KillQuest enemy="Eye_Ghost" ammount="8" percentageToBegin="0"/>
+			<KillQuest enemy="Caterpillar" ammount="6" percentageToBegin="0"/>			
+			<LootQuest enemy="Eye_Ghost" ammount="6" item="QuestItems/Herb1"/>
+			<LootQuest enemy="Caterpillar" ammount="4" item="QuestItems/Herb1"/>
+			<Dependency name="Quest4"/>
+			<Event name="GoBackToTown" dialogName="Quest5/End"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest6" title="Proving Yourself" startDialog="Quest6/Start" background="Scene/Forest/Forest1" town="town2" award="1700" music="forest">
+			<Award item="Consumables/HealingPotion" min="4" max="7"/>
+			<Award item="Consumables/ManaPotion" min="2" max="4"/>
+			<Award item="Armors/adept_Armor" min="1" max="2"/>
+			<Award item="Shields/adept_Shield" min="1" max="1"/>
+			<Dependency name="Quest5"/>
+			<KillQuest enemy="Caterpillar" ammount="10" percentageToBegin="0"/>
+			<KillQuest enemy="Plant" ammount="8" percentageToBegin="0" maxPerWave="1"/>
+			<RescueQuest hostage="ElfWarrior"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Event name="OpenDialog" dialog="Quest6/RescueElf"/>
+		</Quest>
+		<Quest name="Quest7" title="The Werewolf" startDialog="Quest7/Start" background="Scene/Forest/Forest2" town="town2" award="1800" music="forest">
+			<Award item="Consumables/HealingPotion" min="3" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/Berserk" min="1" max="1"/>
+			<Award item="Boots/acolyte_Boot" min="1" max="1"/>	
+			<KillQuest enemy="Plant" ammount="5" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Werewolf" ammount="8" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="BigWerewolf" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest6"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="Quest7AppearWerewolf" trigger="AtEnemiesKilled" numEnemies="13"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>			
+		</Quest>
+		<Quest name="Quest8" title="Carrying the Antidote" startDialog="Quest8/Start" background="Scene/Forest/Forest1" town="town2" award="1750" music="forest">
+			<Award item="Consumables/HealingPotion" min="4" max="7"/>
+			<Award item="Consumables/ManaPotion" min="2" max="4"/>
+			<Award item="Consumables/IronSkin" min="1" max="1"/>
+			<KillQuest enemy="Elf_Archer" ammount="6" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="Plant" ammount="3" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Werewolf" ammount="4" percentageToBegin="0" maxPerWave="1"/>
+			<Dependency name="Quest7"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown" town="0"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest9" title="Green Darkness" startDialog="Quest9/Start" background="Scene/Forest/Forest3" town="town1" award="2000" music="forest">
+			<Award item="Consumables/HealingPotion" min="4" max="7"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Weapons/ranger_Sword" min="1" max="1"/>
+			<Award item="Boots/sentinel_Boot" min="1" max="1"/>	
+			<KillQuest enemy="Green_Darkness" ammount="1" percentageToBegin="0"/>
+			<Dependency name="Quest8"/>
+			<Event name="LoadLevel" levelName="endchapter2"/>
+			<Cinematic name="Quest9CinematicBegin" trigger="begin"/>
+			<Cinematic name="Quest9AfterDefeatingGreenDarkness" trigger="AtEnemiesKilled" numEnemies="1" enemy="Green_Darkness"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>		
+		</Quest>
+		<Quest name="Quest10" title="Kathia's Trust" startDialog="Quest10/Start" background="Scene/Forest/Forest3" town="town2" award="2000" music="forest">
+			<Award item="Consumables/HealingPotion" min="3" max="6"/>
+			<Award item="Consumables/ManaPotion" min="2" max="4"/>
+			<Award item="Consumables/LuckyShot" min="1" max="1"/>
+			<Award item="Weapons/sentinels_Sword" min="1" max="1"/>	
+			<Dependency name="Quest9"/>
+			<KillQuest enemy="Elf_Archer" ammount="12" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Elf_Warrior" ammount="15" percentageToBegin="0" maxPerWave="1"/>
+			<RescueQuest hostage="ElfWarrior"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Event name="GoBackToTown" dialogName="Quest10/End"/>
+		</Quest>
+		<Quest name="Quest11" title="Aurora's Homeland" startDialog="Quest11/Start" background="Scene/Island/Island1" town="town3" award="2200" music="island">
+			<Award item="Consumables/HealingPotion" min="3" max="6"/>
+			<Award item="Consumables/ManaPotion" min="2" max="4"/>
+			<Award item="Shields/sentinels_Shield" min="1" max="1"/>
+			<Award item="Weapons/sentinels_Sword" min="1" max="2"/>
+			<KillQuest enemy="Raven" ammount="15" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="5" percentageToBegin="60" maxPerWave="1"/>
+			<Dependency name="Quest10"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest12" title="Hotu's Heir" startDialog="Quest12/Start" background="Scene/Island/Island1" town="town3" award="2350" music="island">
+			<Award item="Consumables/ManaPotion" min="3" max="7"/>
+			<Award item="Consumables/Hermes" min="1" max="2"/>
+			<Award item="Armors/sentinel_Armor" min="1" max="1"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="12" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Ghost_Pirate" ammount="8" percentageToBegin="40" maxPerWave="1"/>
+			<KillQuest enemy="Last_Ghost_Pirate" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest11"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Cinematic name="Quest12LastGhostPirate" trigger="AtEnemiesKilled" numEnemies="20"/>
+		</Quest>
+		<Quest name="Quest13" title="Blood Steel" startDialog="Quest13/Start" background="Scene/Island/Island2" town="town3" award="2750" music="island">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/FenixTears" min="1" max="1"/>
+			<Award item="Boots/ranger_Boot" min="1" max="1"/>
+			<KillQuest enemy="Raven" ammount="10" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="3" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Ghost_Pirate" ammount="5" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Blood_Steel" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<RescueQuest hostage="Arikis_Son"/>
+			<Dependency name="Quest12"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Cinematic name="Quest13AppearBloodSteel" trigger="AtEnemiesKilled" numEnemies="18"/>
+		</Quest>
+		<Quest name="Quest14" title="1/3 Totems" startDialog="Quest14/Start" background="Scene/Island/Island1" town="town3" award="3000" music="island">
+			<Award item="Consumables/HealingPotion" min="6" max="10"/>
+			<Award item="Consumables/LuckyShot" min="1" max="1"/>
+			<Award item="Consumables/IronSkin" min="1" max="2"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="5" percentageToBegin="0" maxPerWave="1"/>			
+			<KillQuest enemy="Raven" ammount="7" percentageToBegin="0" maxPerWave="1"/>	
+			<KillQuest enemy="Thief" ammount="10" percentageToBegin="0" maxPerWave="2"/>	
+			<KillQuest enemy="Totem1" ammount="1" percentageToBegin="100" maxPerWave="0"/>	
+			<Dependency name="Quest13"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Cinematic name="SpawnEnemy" trigger="begin" enemy="Totem1"/>
+			<Cinematic name="EnableAttacksOnEnemy" trigger="AtEnemiesKilled" numEnemies="16" enemyName="Totem1"/>
+			<Event name="OpenDialog" dialog="Quest14/AfterDestroyingTotem"/>
+		</Quest>
+		<Quest name="Quest15" title="2/3 Totems" startDialog="Quest15/Start" background="Scene/Island/Island2" town="town3" award="3500" music="island">
+			<Award item="Consumables/FenixTears" min="3" max="5"/>
+			<Award item="Boots/sentinel_Boot" min="2" max="3"/>
+			<Award item="Shields/sentinels_Shield" min="2" max="3"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="10" percentageToBegin="0" maxPerWave="1"/>			
+			<KillQuest enemy="Ghost_Pirate" ammount="10" percentageToBegin="0" maxPerWave="2"/>	
+			<KillQuest enemy="Thief" ammount="8" percentageToBegin="0" maxPerWave="1"/>	
+			<KillQuest enemy="Totem2" ammount="1" percentageToBegin="100" maxPerWave="0"/>	
+			<Dependency name="Quest14"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Cinematic name="SpawnEnemy" trigger="begin" enemy="Totem2"/>
+			<Cinematic name="EnableAttacksOnEnemy" trigger="AtEnemiesKilled" numEnemies="20" enemyName="Totem2"/>
+			<Event name="OpenDialog" dialog="Quest15/AfterDestroyingTotem"/>
+		</Quest>
+		<Quest name="Quest16" title="3/3 Totems" startDialog="Quest16/Start" background="Scene/Island/Island3" town="town3" award="3800" music="island">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/FenixTears" min="1" max="1"/>
+			<Award item="Boots/ranger_Boot" min="1" max="1"/>
+			<KillQuest enemy="Raven" ammount="3" percentageToBegin="0" maxPerWave="1"/>			
+			<KillQuest enemy="Ghost_Pirate" ammount="6" percentageToBegin="0" maxPerWave="1"/>	
+			<KillQuest enemy="Thief" ammount="10" percentageToBegin="0" maxPerWave="2"/>	
+			<KillQuest enemy="Totem3" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest15"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Cinematic name="SpawnEnemy" trigger="begin" enemy="Totem3"/>
+			<Cinematic name="EnableAttacksOnEnemy" trigger="AtEnemiesKilled" numEnemies="19" enemyName="Totem3"/>
+			<Event name="OpenDialog" dialog="Quest16/AfterDestroyingTotem"/>
+		</Quest>
+		<Quest name="Quest17" title="The Kraken" startDialog="Quest17/Start" background="Scene/Island/Island3" town="town3" award="4300" music="island">
+			<Award item="Consumables/HealingPotion" min="6" max="10"/>
+			<Award item="Consumables/ManaPotion" min="4" max="7"/>
+			<Award item="Consumables/Berserk" min="1" max="3"/>
+			<Award item="Weapons/quarterMaster_Sword" min="1" max="1"/>
+			<KillQuest enemy="Kraken" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest16"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>			
+			<Cinematic name="Quest17BeginCinematic" trigger="begin"/>
+			<Cinematic name="Quest17AfterDefeatingKraken" trigger="AtEnemiesKilled" numEnemies="1" enemy="Kraken"/>			
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>			
+			<Event name="LoadLevel" levelName="endchapter3"/>
+		</Quest>
+		<Quest name="Quest18" title="Aurora's Rumors" startDialog="Quest18/Start" background="Scene/Island/Island2" town="town3" award="4500" music="island">			
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/FenixTears" min="1" max="1"/>
+			<Award item="Boots/seaman_Boot" min="1" max="1"/>
+			<KillQuest enemy="Ghost_Pirate_b" ammount="10" percentageToBegin="0" maxPerWave="2"/>	
+			<KillQuest enemy="Imp" ammount="9" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="Last_Imp" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest17"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>			
+			<Cinematic name="Quest18LastImp" trigger="AtEnemiesKilled" numEnemies="19"/>
+		</Quest>
+		<Quest name="Quest19" title="Back to the Forest" startDialog="Quest19/Start" background="Scene/Forest/Forest1" town="town3" award="4750" music="forest">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Weapons/sentinels_Sword" min="1" max="1"/>
+			<KillQuest enemy="Elf_Archer_b" ammount="6" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="Plant_b" ammount="10" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="Werewolf_b" ammount="4" percentageToBegin="0" maxPerWave="1"/>
+			<Dependency name="Quest18"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest20" title="The magic Zapphire" startDialog="Quest20/Start" background="Scene/Forest/Forest2" town="town2" award="5000" music="forest">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/FenixTears" min="1" max="1"/>
+			<Award item="Armors/acolyte_Armor" min="3" max="5"/>
+			<KillQuest enemy="Werewolf_b" ammount="10" percentageToBegin="0"/>
+			<KillQuest enemy="Elf_Warrior_b" ammount="7" percentageToBegin="0"/>
+			<KillQuest enemy="Elf_Archer_b" ammount="5" percentageToBegin="0"/>
+			<LootQuest enemy="Werewolf_b" ammount="3" item="QuestItems/Blue Zapphire"/>
+			<LootQuest enemy="Elf_Warrior_b" ammount="4" item="QuestItems/Blue Zapphire"/>
+			<LootQuest enemy="Elf_Archer_b" ammount="3" item="QuestItems/Blue Zapphire"/>
+			<Dependency name="Quest19"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest21" title="The Lava Golem" startDialog="Quest21/Start" background="Scene/Forest/Forest3" town="town2" award="4850" music="forest">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/LuckyShot" min="1" max="2"/>
+			<Award item="Weapons/ranger_Sword" min="1" max="1"/>
+			<KillQuest enemy="Lava_Golem" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest20"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Cinematic name="Quest21BeginCinematic" trigger="begin"/>
+			<Cinematic name="Quest21AfterDefeatingLavaGolem" trigger="AtEnemiesKilled" numEnemies="1" enemy="Lava_Golem"/>
+		</Quest>
+		<Quest name="Quest22" title="The Old Man" startDialog="Quest22/Start" background="Scene/Volcano/Volcano1" town="town4" award="4900" music="volcano">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/Hermes" min="1" max="1"/>
+			<Award item="Shields/quartermaster_Shield" min="1" max="1"/>
+			<KillQuest enemy="Bee" ammount="5" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="FireSkull" ammount="3" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Imp" ammount="7" percentageToBegin="0" maxPerWave="1"/>
+			<LootQuest enemy="Imp" ammount="5" item="QuestItems/Red Ruby"/>
+			<Dependency name="Quest21"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown" dialogName="Quest22/SelfThought"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest23" title="The Guardians" startDialog="Quest23/Start" background="Scene/Volcano/Volcano2" town="town4" award="4950" music="volcano">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/Berserk" min="1" max="2"/>
+			<Award item="Boots/seaman_Boot" min="2" max="3"/>
+			<KillQuest enemy="FireSkull" ammount="12" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="Red_Knight" ammount="6" percentageToBegin="0" maxPerWave="1"/>
+			<Dependency name="Quest22"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest24" title="Magma Phoenix" startDialog="Quest24/Start" background="Scene/Volcano/Volcano3" town="town4" award="5500" music="volcano">
+			<Award item="Consumables/HealingPotion" min="2" max="4"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/FenixTears" min="3" max="3"/>
+			<Award item="Weapons/mythril_Sword" min="1" max="1"/>
+			<KillQuest enemy="Magma_Fenix" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest23"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+			<Cinematic name="Quest24MagmaPhoenixDialog" trigger="begin"/>
+			<Cinematic name="Quest24AfterDefeatingMagmaPhoenix" trigger="AtEnemiesKilled" numEnemies="1" enemy="Magma_Fenix"/>
+			<Event name="LoadLevel" levelName="endchapter4"/>
+		</Quest>
+		<Quest name="Quest25" title="Land of the Fallen Angels" startDialog="Quest25/Start" background="Scene/FallenAngels/FallenAngels1" town="town4" award="5500" music="underworld">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="4" max="6"/>
+			<Award item="Consumables/LuckyShot" min="1" max="2"/>
+			<Award item="Shields/mythril_Shield" min="1" max="1"/>
+			<KillQuest enemy="Beholder" ammount="7" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="Cursed_Soul" ammount="5" percentageToBegin="0" maxPerWave="1"/>
+			<Dependency name="Quest24"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown" dialogName="Quest25/SelfThought"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest26" title="The Executioner" startDialog="Quest26/Start" background="Scene/FallenAngels/FallenAngels2" town="town5" award="6000" music="underworld">
+			<Award item="Consumables/HealingPotion" min="4" max="8"/>
+			<Award item="Consumables/ManaPotion" min="2" max="5"/>
+			<Award item="Consumables/Elixir" min="1" max="2"/>
+			<Award item="Weapons/forged_Sword" min="1" max="1"/>
+			<KillQuest enemy="Executioner" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest25"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>			
+			<Cinematic name="Quest26BeginCinematic" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest27" title="The Darkest Path" startDialog="Quest27/Start" background="Scene/FallenAngels/FallenAngels1" town="town5" award="6300" music="underworld">
+			<Award item="Consumables/HealingPotion" min="6" max="8"/>
+			<Award item="Consumables/ManaPotion" min="3" max="5"/>
+			<Award item="Consumables/Berserk" min="1" max="2"/>
+			<Award item="Armors/quarterMaster_Armor" min="1" max="1"/>
+			<KillQuest enemy="Beholder" ammount="7" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Cursed_Soul" ammount="7" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="Warlock" ammount="7" percentageToBegin="0" maxPerWave="1"/>
+			<Dependency name="Quest26"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest28" title="The Impaler" startDialog="Quest28/Start" background="Scene/FallenAngels/FallenAngels2" town="town5" award="7000" music="underworld">
+			<Award item="Consumables/HealingPotion" min="4" max="10"/>
+			<Award item="Consumables/ManaPotion" min="4" max="7"/>
+			<Award item="Consumables/IronSkin" min="2" max="4"/>
+			<Award item="Shields/ethereal_Shield" min="1" max="1"/>
+			<KillQuest enemy="Impaler" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest27"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>			
+			<Cinematic name="Quest28BeginCinematic" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest29" title="To the Castle" startDialog="Quest29/Start" background="Scene/FallenAngels/FallenAngels1" town="town5" award="7300" music="underworld">
+			<Award item="Consumables/HealingPotion" min="6" max="10"/>
+			<Award item="Consumables/ManaPotion" min="4" max="7"/>
+			<Award item="Consumables/Hermes" min="2" max="2"/>
+			<Award item="Boots/forged_Boot" min="1" max="1"/>
+			<KillQuest enemy="Beholder" ammount="5" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="White_Electric_Cloud" ammount="10" percentageToBegin="0" maxPerWave="2"/>
+			<KillQuest enemy="Warlock" ammount="10" percentageToBegin="0" maxPerWave="2"/>
+			<Dependency name="Quest28"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+		<Quest name="Quest30" title="Aurora" startDialog="Quest30/Start" background="Scene/FallenAngels/FallenAngels4" town="town5" award="7500" music="underworld">
+			<Award item="Consumables/Elixir" min="5" max="5"/>
+			<Award item="Consumables/FenixTears" min="5" max="5"/>
+			<Award item="Weapons/flaming_Sword" min="1" max="1"/>
+			<KillQuest enemy="Aurora" ammount="1" percentageToBegin="100" maxPerWave="0"/>
+			<Dependency name="Quest29"/>
+			<Event name="CloseQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>			
+			<Cinematic name="Quest30BeginCinematic" trigger="begin"/>
+			<Cinematic name="Quest30AfterDefeatingAurora" trigger="AtEnemiesKilled" numEnemies="1" enemy="Aurora"/>
+		</Quest>
+		<Quest name="QuestEasterEgg" title="Easter Egg" background="Scene/Island/Island1" town="town3" award="10000" music="island">
+			<Award item="Consumables/Elixir" min="5" max="5"/>
+			<Award item="Consumables/FenixTears" min="5" max="5"/>
+			<Award item="Weapons/forest_sages_Sword" min="1" max="1"/>
+			<KillQuest enemy="Thief" ammount="5" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Raven" ammount="5" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="5" percentageToBegin="0" maxPerWave="1"/>
+			<KillQuest enemy="Ghost_Pirate" ammount="5" percentageToBegin="0" maxPerWave="2"/>
+			<RescueQuest hostage="LexNano"/>
+			<Dependency name="Quest30"/>
+			<Event name="CloseEasterQuest"/>
+			<Event name="GoBackToTown"/>
+			<Cinematic name="ShowQuestTitle" trigger="begin"/>
+		</Quest>
+	</Quests>
+	<MetaQuests>
+		<!-- town 1 -->
+		<MetaQuest name="Town1/BlacksmithKillQuest" title="Cemetery Thieves" background="Scene/Cemetery/Cemetery1" town="town1" award="300" music="cemetery" maxKillQuests="2">
+			<Dependency name="Quest2"/>
+			<KillQuest enemy="Bat" ammount="10"/>
+			<KillQuest enemy="Reaper" ammount="10" mandatory="true"/>
+			<KillQuest enemy="Eye_Ghost" ammount="10"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town1_blacksmith" sender="Blacksmith" senderalignment="right">Some creatures from the cemetery robbed my store the other day!</Message>
+				<Message leftIcon="hero" rightIcon="town1_blacksmith" sender="Blacksmith" senderalignment="right">Please, help me Sigmus!</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town1/MerchantQuest" title="A Slimy Request" background="Scene/Cemetery/Cemetery2" town="town1" award="400" music="cemetery" maxKillQuests="2">
+			<Dependency name="Quest3"/>
+			<KillQuest enemy="Bat" ammount="10"/>
+			<KillQuest enemy="Reaper" ammount="10"/>
+			<KillQuest enemy="Eye_Ghost" ammount="10" mandatory="true"/>
+			<LootQuest enemy="Eye_Ghost" ammount="10" item="QuestItems/Eye Slime"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town1_merchant" sender="Merchant" senderalignment="right">I need some Eye Ghost slime to prepare my healing potions.</Message>
+				<Message leftIcon="hero" rightIcon="town1_merchant" sender="Merchant" senderalignment="right">Can you fill this pot with the slime, please?</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town1/ThiltranQuest" title="Protecting the Forests" background="Scene/Cemetery/Cemetery3" town="town1" award="350" music="cemetery" maxKillQuests="3">
+			<Dependency name="Quest4"/>
+			<KillQuest enemy="Bat" ammount="10"/>
+			<KillQuest enemy="Reaper" ammount="10"/>
+			<KillQuest enemy="Eye_Ghost" ammount="10" mandatory="true"/>
+			<LootQuest enemy="Eye_Ghost" ammount="8" item="QuestItems/Rune 1"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">I heard the ghosts stole the runes that protect the Forest.</Message>
+				<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">Could you recover them to me? I'll send them to Queen Nessa.</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town1/HostageQuest" title="Little Girl" background="Scene/Cemetery/Cemetery2" town="town1" award="450" music="cemetery" maxKillQuests="3">
+			<Dependency name="Quest2"/>
+			<KillQuest enemy="Bat" ammount="15" mandatory="true"/>
+			<KillQuest enemy="Reaper" ammount="10"/>
+			<KillQuest enemy="Eye_Ghost" ammount="10"/>
+			<RescueQuest hostage="Girl"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">The bats by the cemetery frightened a young girl.</Message>
+				<Message leftIcon="hero" rightIcon="father_thiltran" sender="Father Thiltran" senderalignment="right">I'm too old to get her back, </Message>
+			</Messages>
+		</MetaQuest>
+		<!-- town 2 -->
+		<MetaQuest name="Town2/SwordmanQuest" title="The Healing Seeds" background="Scene/Forest/Forest1" town="town2" award="600" music="forest" maxKillQuests="2">
+			<Dependency name="Quest6"/>
+			<KillQuest enemy="Plant" ammount="10" mandatory="true"/>
+			<KillQuest enemy="Werewolf" ammount="10"/>
+			<KillQuest enemy="Caterpillar" ammount="10"/>
+			<LootQuest enemy="Plant" ammount="10" item="QuestItems/Plant Seed"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town2_swordmaster" sender="Swordmaster" senderalignment="right">I need some plants seeds to reforest the eastern plains.</Message>
+				<Message leftIcon="hero" rightIcon="town2_swordmaster" sender="Swordmaster" senderalignment="right">Mind getting me some, please?</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town2/BlacksmithQuest" title="The Emerald City" background="Scene/Forest/Forest2" town="town2" award="650" music="forest" maxKillQuests="2">
+			<Dependency name="Quest7"/>
+			<KillQuest enemy="Caterpillar" ammount="12" mandatory="true"/>
+			<KillQuest enemy="Werewolf" ammount="8"/>
+			<KillQuest enemy="Plant" ammount="8"/>
+			<LootQuest enemy="Caterpillar" ammount="10" item="QuestItems/Green Emerald"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town2_blacksmith" sender="Blacksmith" senderalignment="right">Caterpillars love to hide emeralds near their nests.</Message>
+				<Message leftIcon="hero" rightIcon="town2_blacksmith" sender="Blacksmith" senderalignment="right">I need them to infuse my magic on these armors.</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town2/MerchantQuest" title="The Blood of the Wolves" background="Scene/Forest/Forest3" town="town2" award="700" music="forest" maxKillQuests="3">
+			<Dependency name="Quest8"/>
+			<KillQuest enemy="Werewolf" ammount="12" mandatory="true"/>
+			<KillQuest enemy="Elf_Archer" ammount="5"/>
+			<KillQuest enemy="Elf_Warrior" ammount="5"/>
+			<KillQuest enemy="Plant" ammount="5" mandatory="true"/>
+			<LootQuest enemy="Werewolf" ammount="10" item="QuestItems/Lycan Blood"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town2_merchant" sender="Merchant" senderalignment="right">I need some Lycan's Blood to cure our injured warriors.</Message>
+				<Message leftIcon="hero" rightIcon="town2_merchant" sender="Merchant" senderalignment="right">Can you kill like, 10 werewolves, and bring me their blood?</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town2/HostageQuest" title="Wounded Warrior" background="Scene/Forest/Forest2" town="town2" award="750" music="forest" maxKillQuests="2">
+			<Dependency name="Quest9"/>
+			<KillQuest enemy="Werewolf" ammount="12" mandatory="true"/>
+			<KillQuest enemy="Elf_Archer" ammount="8"/>
+			<KillQuest enemy="Elf_Warrior" ammount="8"/>
+			<RescueQuest hostage="ElfSoldier"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">One of my soldiers went to the forest to spy on our enemies.</Message>
+				<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">He hasn't come back in three days.</Message>
+				<Message leftIcon="hero" rightIcon="nessa" sender="Nessa Faelivrin" senderalignment="right">I'm afraid he has been ambushed.</Message>
+			</Messages>
+		</MetaQuest>			
+		<!-- town 3 -->
+		<MetaQuest name="Town3/MerchantQuest" title="The Magic Water Runes" background="Scene/Island/Island1" town="town3" award="800" music="island" maxKillQuests="2">
+			<Dependency name="Quest11"/>
+			<KillQuest enemy="Ghost_Pirate" ammount="15" mandatory="true"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="5"/>
+			<KillQuest enemy="Raven" ammount="5"/>
+			<LootQuest enemy="Ghost_Pirate" ammount="10" item="QuestItems/Rune 3"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town3_merchant" sender="Merchant" senderalignment="right">The ghosts are trying to sink this town under the ocean tides!</Message>
+				<Message leftIcon="hero" rightIcon="town3_merchant" sender="Merchant" senderalignment="right">Please recover the water runes!</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town3/BlacksmithQuest" title="Moonstone Engraving" background="Scene/Island/Island2" town="town3" award="850" music="island" maxKillQuests="2">
+			<Dependency name="Quest13"/>
+			<KillQuest enemy="Thief" ammount="15" mandatory="true"/>
+			<KillQuest enemy="Bee" ammount="5"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="5"/>
+			<LootQuest enemy="Thief" ammount="10" item="QuestItems/Moonstone"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town3_blacksmith" sender="Blacksmith" senderalignment="right">Sigmus! Thieves robbed my sacred moonstones!</Message>
+				<Message leftIcon="hero" rightIcon="town3_blacksmith" sender="Blacksmith" senderalignment="right">I'm supposed to engrave these shields with them!</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town3/ArikiQuest" title="Helpful Neighbour" background="Scene/Island/Island3" town="town3" award="900" music="island" maxKillQuests="2">
+			<Dependency name="Quest14"/>
+			<KillQuest enemy="Thief" ammount="5"/>
+			<KillQuest enemy="Raven" ammount="5"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="15" mandatory="true"/>
+			<LootQuest enemy="Dark_Electric_Cloud" ammount="10" item="QuestItems/Rune 2"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">An elder came from the volcano town.</Message>
+				<Message leftIcon="hero" rightIcon="ariki" sender="Ariki Hotu" senderalignment="right">He said the sea creatures stole their Fire Runes.</Message>
+			</Messages>
+		</MetaQuest>
+		<!-- town 4 -->
+		<MetaQuest name="Town4/SwordmanQuest" title="Solar Powered Swords" background="Scene/Volcano/Volcano1" town="town4" award="1200" music="volcano" maxKillQuests="2">
+			<Dependency name="Quest22"/>
+			<KillQuest enemy="Imp" ammount="10" mandatory="true"/>
+			<KillQuest enemy="FireSkull" ammount="10" mandatory="true"/>
+			<LootQuest enemy="FireSkull" ammount="8" item="QuestItems/Sunstone"/>
+			<LootQuest enemy="Imp" ammount="8" item="QuestItems/Imp Wings"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town4_swordmaster" sender="Swordmaster" senderalignment="right">I went to the volcano to get some supplies and the fire skulls attacked me.</Message>
+				<Message leftIcon="hero" rightIcon="town4_swordmaster" sender="Swordmaster" senderalignment="right">Can you help me recover my valuable sunstones?</Message>
+				<Message leftIcon="hero" rightIcon="town4_swordmaster" sender="Swordmaster" senderalignment="right">And, while there, can you get some imp wings?</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town4/MerchantQuest" title="Those Huge Honeybees!" background="Scene/Volcano/Volcano2" town="town4" award="1400" music="volcano" maxKillQuests="2">
+			<Dependency name="Quest23"/>
+			<KillQuest enemy="Bee" ammount="12" mandatory="true"/>
+			<KillQuest enemy="FireSkull" ammount="10"/>
+			<KillQuest enemy="Dark_Electric_Cloud" ammount="10"/>
+			<LootQuest enemy="Bee" ammount="12" item="QuestItems/Honey Bee"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town4_merchant" sender="Merchant" senderalignment="right">One of the ingredients of my potions is honey.</Message>
+				<Message leftIcon="hero" rightIcon="town4_merchant" sender="Merchant" senderalignment="right">Maybe I'll tell you which if you help me. Or not.</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town4/BlacksmithQuest" title="The Strength Horns" background="Scene/Volcano/Volcano3" town="town4" award="1500" music="volcano" maxKillQuests="2">
+			<Dependency name="Quest24"/>
+			<KillQuest enemy="Red_Knight" ammount="15" mandatory="true"/>
+			<KillQuest enemy="Imp" ammount="5"/>
+			<KillQuest enemy="FireSkull" ammount="5"/>
+			<LootQuest enemy="Red_Knight" ammount="10" item="QuestItems/Red Horn"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town4_swordmaster" sender="Swordmaster" senderalignment="right">The Horns of the red knights helmets are an expensive luxury.</Message>
+				<Message leftIcon="hero" rightIcon="town4_swordmaster" sender="Swordmaster" senderalignment="right">Some men are willing to pay a lot for swords with these.</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town4/HostageQuest" title="The Old Man and the Lava" background="Scene/Volcano/Volcano2" town="town4" award="1600" music="volcano" maxKillQuests="2">
+			<Dependency name="Quest23"/>
+			<KillQuest enemy="Bee" ammount="10"/>
+			<KillQuest enemy="Imp" ammount="10"/>
+			<KillQuest enemy="FireSkull" ammount="10" mandatory="true"/>
+			<RescueQuest hostage="OldMan"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">The town's philosopher went to the volcano's cliff to think yesterday.</Message>
+				<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">I don't know what happened, but I think he was attacked.</Message>
+				<Message leftIcon="hero" rightIcon="oldman" sender="Old man" senderalignment="right">Maybe you can help him get back to the town?</Message>
+			</Messages>
+		</MetaQuest>
+		<!-- town 5 -->
+		<MetaQuest name="Town5/MerchantQuest" title="Whispering Wisps" background="Scene/FallenAngels/FallenAngels1" town="town5" award="2000" music="underworld" maxKillQuests="3">
+			<Dependency name="Quest26"/>
+			<KillQuest enemy="Warlock" ammount="10" mandatory="true"/>
+			<KillQuest enemy="Cursed_Soul" ammount="7"/>
+			<KillQuest enemy="Beholder" ammount="7"/>
+			<KillQuest enemy="White_Electric_Cloud" ammount="7"/>
+			<LootQuest enemy="Warlock" ammount="10" item="QuestItems/Warlock Flame"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town5_merchant" sender="Merchant" senderalignment="right">One of my rings is heavily infused in a pot filled with wisps.</Message>
+				<Message leftIcon="hero" rightIcon="town5_merchant" sender="Merchant" senderalignment="right">You can find them following the warlocks.</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town5/BlacksmithQuest" title="Beholders of Death" background="Scene/FallenAngels/FallenAngels2" town="town5" award="2500" music="underworld" maxKillQuests="3">
+			<Dependency name="Quest28"/>
+			<KillQuest enemy="Beholder" ammount="15" mandatory="true"/>
+			<KillQuest enemy="Cursed_Soul" ammount="7"/>
+			<KillQuest enemy="Warlock" ammount="7"/>
+			<KillQuest enemy="White_Electric_Cloud" ammount="7"/>
+			<LootQuest enemy="Beholder" ammount="10" item="QuestItems/Eye Beholder"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town5_blacksmith" sender="Blacksmith" senderalignment="right">I'm too old to get Beholder's Eyes for my armors...</Message>
+				<Message leftIcon="hero" rightIcon="town5_blacksmith" sender="Blacksmith" senderalignment="right">Can you help me? I'll reward you.</Message>
+			</Messages>
+		</MetaQuest>
+		<MetaQuest name="Town5/SwordmasterQuest" title="The Great Curse" background="Scene/FallenAngels/FallenAngels1" town="town5" award="2250" music="underworld" maxKillQuests="3">
+			<Dependency name="Quest26"/>
+			<KillQuest enemy="Cursed_Soul" ammount="10" mandatory="true"/>
+			<KillQuest enemy="Warlock" ammount="7"/>
+			<KillQuest enemy="Beholder" ammount="7"/>
+			<KillQuest enemy="White_Electric_Cloud" ammount="7"/>
+			<Messages>
+				<Message leftIcon="hero" rightIcon="town5_swordmaster" sender="Swordmaster" senderalignment="right">My swords! I'm under a sleep curse! Please help me!</Message>
+				<Message leftIcon="hero" rightIcon="town5_swordmaster" sender="Swordmaster" senderalignment="right">The robbers got my swords while I was sleeping!</Message>
+			</Messages>
+		</MetaQuest>				
+	</MetaQuests>
+</GameData>

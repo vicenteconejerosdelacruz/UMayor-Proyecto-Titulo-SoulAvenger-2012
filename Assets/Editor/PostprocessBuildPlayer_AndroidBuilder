@@ -1,0 +1,28 @@
+#!/usr/bin/perl
+
+# Disabled, due that we are using muneris sdk for a while, if we will not use it comment the exit
+# exit;
+
+# Dont run script if we're building for iPhone (TODO:find out how we can make this condition correctly)
+if( lc($ARGV[1]) eq "iphone" )
+{
+	exit;
+}
+
+# User setup section
+#====================================================================
+# Optional param that tells the tool if the build will be debuggable or if it should wait for user mode selection before starting the tool build
+# my $buildDebugMode = "debugModeOn"; # you can also use debugModeOff or debugModeAsk (default if not specified: debugModeAsk)
+#====================================================================
+
+use File::Copy;
+use File::Basename;
+use Cwd 'abs_path';
+
+# Get AndroidBuilder.jar full path with / trailing char
+my $toolPath = dirname(abs_path($0)) . "/AndroidBuilder/";
+
+# Setup some required variables
+my $apkPathFromUnity = $ARGV[0];
+
+system("java", "-jar", $toolPath . "AndroidBuilder.jar", $toolPath, $apkPathFromUnity);

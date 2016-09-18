@@ -1,0 +1,252 @@
+{
+  "trialpay": {
+    "integrationCode": "562d292249a5c5bccc9a034db82bc91f",
+    "rewards": {
+      "extraParams": {
+        "origin": "US"
+      }
+    }
+  },
+  "webview:tapjoyDeepLink": {
+    "baseUrl": "http://www.tapjoy.com/",
+    "openInExternalBrowser": 1
+  },
+  "aarki": {
+    "appId": "884335BAF0064D14AA",
+    "rewards": {
+      "extraParams": {
+        "origin": "US"
+      }
+    }
+  },
+  "webview:aarki_others": {
+    "title": "Offer Garden",
+    "baseUrl": "http://ar.aarki.net/garden?src=884335BAF0064D14AA&offer_type=lead,installs&bundle_id={bundleId}&device_id={installId}&openudid={openUdid}&mac={mac}",
+    "openInExternalBrowser": 1
+  },
+  "remotestorage": {},
+  "localytics": {
+    "appKey": "b547079863a941d306e24a7-6b36a840-dc47-11e1-4a28-00ef75f32667",
+    "durationEventParameter": 1
+  },
+  "adcolony": {
+    "appId": "app4eee99f645c69",
+    "zoneId": {
+      "offers": "z4efa7a43c3df0",
+      "video": "z4efa7a43c3df0"
+    }
+  },
+  "appleiap": {
+    "skProductCache": true,
+    "sku": {
+      "mappings": {
+        "pack1": "testing_01"
+      }
+    }
+  },
+  "mdotm": {
+    "appleId": "457515110",
+    "durationEventParameter": 1
+  },
+  "sponsorpay": {
+    "appId": "6661",
+    "rewards": {
+      "extraParams": {
+        "origin": "US"
+      }
+    }
+  },
+  "iad": {
+    "retryCount": 1
+  },
+  "admob": {
+    "appId": "a14e48c9c6e6b6c"
+  },
+  "flurry": {
+    "DEBUG": true,
+    "rewards": {
+      "clips": {
+        "currency": "Pet Points",
+        "image": "http://www.animoca.com/en/wp-content/uploads/2011/09/Super-Engineer-Logo.jpg",
+        "points": 5,
+        "extraParams": {
+          "origin": "US"
+        }
+      },
+      "appCircle": {
+        "image": "http://www.animoca.com/en/wp-content/uploads/2012/02/Forest-Defense-Icon-Small-110x110.png",
+        "points": 1,
+        "currency": "Muneris Coin",
+        "message": "Earn 1000 Updated Coins by installing offer.",
+        "title": "NEW Offer",
+        "extraParams": {
+          "origin": "US"
+        }
+      }
+    },
+    "apiKey": "X1CYFIXKEAVGP5FBG7WT",
+    "takeovers": {
+      "zones": {
+        "menu": "offers"
+      }
+    },
+    "secureTransport": true
+  },
+  "w3i": {
+    "advertiserId": "795",
+    "publisherId": "830",
+    "appId": "10646",
+    "offerwallName": "abc Muneris Demo"
+  },
+  "chartboost": {
+    "appId": "4e92c8155c2b947f20000004",
+    "appSecret": "976b1667f858b60667e5d2743ffd2014f5fbeedc"
+  },
+  "facebook": {
+    "appId": "322253581176905",
+    "permissions": [
+      "read_stream",
+      "publish_stream"
+    ]
+  },
+  "webview:aarki_videos": {
+    "title": "Offer/nGarden/nVideo",
+    "baseUrl": "http://ar.aarki.net/garden?src=884335BAF0064D14AA&offer_type=video&bundle_id={bundleId}&device_id={installId}"
+  },
+  "muneris": {
+    "debugLogLevel": "DEBUG",
+    "appleId": "457515110",
+    "plugins": {
+      "envars": {
+        "updateInterval": 30
+      },
+      "inbox": {
+        "limit": 10
+      },
+      "ppa": {
+        "ppa": {
+          "mappings": {
+            "action1": "abc"
+          }
+        },
+        "logSize": 10
+      },
+      "customersupport": {
+        "allowInlineMediaPlayback": 1,
+        "title": "customer/nsupport",
+        "style": {
+          "margin": 10,
+          "borderWidth": 5
+        }
+      },
+      "version": {
+        "criticalMessage": "Critical Update Available",
+        "autoCheck": true,
+        "message": "Updates",
+        "title": "Update Available",
+        "criticalTitle": "Critical Version update"
+      },
+      "offers": {
+        "messages": {
+          "errorMessage": "Sorry, please try again later.",
+          "maxRows": 4,
+          "title": "IAP DEMO"
+        },
+        "offeringItems": [
+          {
+            "title": "Featured App",
+            "zone": "featured"
+          },
+          {
+            "title": "Video Clips",
+            "zone": "video"
+          },
+          {
+            "title": "Offer Wall",
+            "zone": "offers"
+          }
+        ]
+      },
+      "mediation": {
+        "ads": {
+          "adZone": {
+            "iad": 1,
+            "admob": 0,
+            "mopub": 0,
+            "smartmad": 0
+          }
+        },
+        "takeovers": {
+          "featured": {
+            "tapjoy:featured": 0,
+            "w3i": 1,
+            "chartboost": 0,
+            "smartmad": 0,
+            "flurry:featured": 0
+          },
+          "offers": {
+            "tapjoy:offerwall": 0,
+            "trialpay": 0,
+            "adcolony": 0,
+            "w3i:offerwall": 1,
+            "sponsorpay": 0,
+            "flurry:offerwall": 0,
+            "aarki_others": 0,
+            "appdriver": 0
+          },
+          "video": {
+            "flurry:video": 0,
+            "aarki_videos": 0,
+            "aarki:offerwall(video,leads)": 0,
+            "adcolony": 0
+          }
+        }
+      },
+      "analytics": {
+        "logSize": 100
+      },
+      "moreapps": {}
+    }
+  },
+  "mopub": {
+    "appId": "agltb3B1Yi1pbmNyDQsSBFNpdGUYotrdEgw"
+  },
+  "smartmad": {
+    "adPosition": "90021248",
+    "adInterval": 20,
+    "debug": true,
+    "adBannerAnimation": 2,
+    "appId": "aa7e7970aa25e4b9"
+  },
+  "appdriver": {
+    "ppa": {
+      "mappings": {
+        "abc": "action1Id"
+      }
+    },
+    "debug": false,
+    "refreshUrl": "",
+    "refreshTime": 0,
+    "mediaId": 748,
+    "siteId": "2864",
+    "siteKey": "34f77860f000f76653a86f1f7dbdd0a4"
+  },
+  "tapjoy": {
+    "featuredApp": {
+      "title": "Testing Featured App"
+    },
+    "shouldReload": true,
+    "ppa": {
+      "mappings": {
+        "action1": "action1Id"
+      }
+    },
+    "retryCount": 1,
+    "video": {
+      "cacheCount": 0,
+      "enable": false
+    },
+    "appId": "97084d15-88e9-44e3-8836-82022f590b1c",
+    "appSecret": "a9x5QlhRFDhwyW2j7p6l"
+  }
+}

@@ -1,0 +1,9 @@
+fileFormatVersion: 1
+guid: 352bfe2dfc35d8d4e940bf677521c73c
+MonoImporter:
+  importerVersion: 1
+  defaultReferences:
+    backgroundShopping: {fileID: 2800000, guid: 5fb7a0c9211db074bad87defdffcd908,
+      type: 1}
+    portraitNPC: {fileID: 2800000, guid: 74f2ee5fc3f64ae47bbf7e5aabfb9fa1, type: 1}
+    portraitHero: {fileID: 2800000, guid: 078fe4fffc12904419082457d01f2a3c, type: 1}

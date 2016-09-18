@@ -1,0 +1,68 @@
+#!/usr/bin/python -B
+
+from mod_pbxproj import XcodeProject
+
+import tkMessageBox
+import sys
+import os
+
+VERSION = '2.2.0'
+W3I_VERSION = '3.0.2'
+#ADCOLONY_VERSION = '1.9.9'
+
+def integrate(argv=None):
+    if not argv:
+        argv = sys.argv
+    
+    installPath = argv[1]
+            
+    sourcePath = os.getcwd() + '/Assets/Editor/Muneris/MunerisXCode'
+    fpath = installPath + '/Unity-iPhone.xcodeproj/muneris_integrated.txt'
+
+    if os.path.exists(fpath):
+	f = open(fpath, 'rb')
+	vline = f.readline()
+	parts = vline.split('=')
+	v = parts[1].strip()
+	print 'Integrated with version ' + v
+
+	if v == VERSION:
+		print 'Integration already completed. Exiting.'
+		return
+	else:
+		print 'Integration with different version. Requires new build instead of append.'
+		tkMessageBox.showerror('Muneris', 'The Muneris version in the XCode project ('+v+') differs from the version in the Unity project ('+VERSION+'). Please perform a "replace" build instead of an append.')
+
+    proj = XcodeProject.Load(installPath + '/Unity-iPhone.xcodeproj/project.pbxproj')
+    proj.add_folder(sourcePath, excludes=["^.*\.meta$"])
+
+    print proj
+    
+    w3iLib = '-force_load ' + os.getcwd() + '/Assets/Editor/Muneris/MunerisXCode/vendors/W3i/' + W3I_VERSION + '/libW3iPublisherSdk.a'
+    #adColonyLib = '-force_load ' + os.getcwd() + '/Assets/Editor/Muneris/MunerisXCode/vendors/AdColony/' + ADCOLONY_VERSION + '/libAdColony.a'
+    #socialLib = '-force_load ' + os.getcwd() + '/Assets/Editor/Muneris/MunerisXCode/muneris/Muneris-iOS-Social-Extension-' + VERSION + '.a'
+    publisherLib = '-force_load ' + os.getcwd() + '/Assets/Editor/Muneris/MunerisXCode/muneris/Muneris-iOS-Publisher-' + VERSION + '.a'
+    iapLib = '-force_load ' + os.getcwd() + '/Assets/Editor/Muneris/MunerisXCode/muneris/Muneris-iOS-IAP-Extension-' + VERSION + '.a'
+
+    for config in proj.get_build_configs():
+        config['buildSettings']['OTHER_LDFLAGS'] = '-Wl,-S,-x,-weak-lSystem ' + publisherLib + ' ' + iapLib + ' ' + w3iLib
+        config['buildSettings']['GCC_ENABLE_OBJC_EXCEPTIONS'] = 'YES'
+
+    proj.add_file('/usr/lib/libsqlite3.dylib', tree='SDKROOT');
+
+    proj.add_file('System/Library/Frameworks/MobileCoreServices.framework', tree='SDKROOT')            
+    proj.add_file('System/Library/Frameworks/MessageUI.framework', tree='SDKROOT')
+    proj.add_file('System/Library/Frameworks/CoreTelephony.framework', tree='SDKROOT')            
+    proj.add_file('System/Library/Frameworks/StoreKit.framework', tree='SDKROOT')
+    proj.add_file('System/Library/Frameworks/Security.framework', tree='SDKROOT')
+
+    proj.backup()
+    proj.save()
+
+    f = open(fpath, 'wb');
+    f.write('VERSION = ' + VERSION + '\n');
+    f.write('NOTE = This file marks the project as integrated with Muneris version ' + VERSION + '\n');
+    f.close();
+
+if __name__ == '__main__':
+    sys.exit(integrate())

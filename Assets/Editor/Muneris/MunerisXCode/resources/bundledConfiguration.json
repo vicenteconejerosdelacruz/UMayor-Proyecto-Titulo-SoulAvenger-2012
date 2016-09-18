@@ -1,0 +1,155 @@
+{
+  "webview:tapjoyDeepLink": {
+    "title": "Offer Garden",
+    "baseUrl": "http://www.tapjoy.com/"
+  },
+  "webview:aarki_others": {
+    "title": "Offer Garden",
+    "baseUrl": "http://ar.aarki.net/garden?src=884335BAF0064D14AA&offer_type=lead,installs&bundle_id={bundleId}&device_id={installId}"
+  },
+  "appleiap": {
+    "sku": {
+      "mappings": {
+        "pack1": "com.orientedgames.itunes.dinerCity.coinpack3"
+      }
+    }
+  },
+  "iad": {
+    "retryCount": 1
+  },
+  "admob": {
+    "appId": "a14e48c9c6e6b6c"
+  },
+  "flurry": {
+    "DEBUG": true,
+    "rewards": {
+      "clips": {
+        "currency": "Pet Points",
+        "image": "http://www.animoca.com/en/wp-content/uploads/2011/09/Super-Engineer-Logo.jpg",
+        "points": 5
+      },
+      "appCircle": {
+        "title": "NEW Offer",
+        "currency": "Muneris Coin",
+        "message": "Earn 1000 Updated Coins by installing offer.",
+        "points": 85296
+      }
+    },
+    "apiKey": "2E1R7GLCZTNUPAN3YHPC",
+    "takeovers": {
+      "zones": {
+        "menu": "offers"
+      }
+    },
+    "secureTransport": true
+  },
+  "chartboost": {
+    "appId": "4e92c8155c2b947f20000004",
+    "appSecret": "976b1667f858b60667e5d2743ffd2014f5fbeedc"
+  },
+  "facebook": {
+    "appId": "322253581176905",
+    "permissions": [
+                    "read_stream",
+                    "publish_stream"
+                    ]
+  },
+  "webview:aarki_videos": {
+    "title": "Offer Garden Video",
+    "baseUrl": "http://ar.aarki.net/garden?src=884335BAF0064D14AA&offer_type=video&bundle_id={bundleId}&device_id={installId}"
+  },
+  "muneris": {
+    "appleId": "457515110",
+    "plugins": {
+      "envars": {
+        "updateInterval": 30
+      },
+      "inbox": {
+        "limit": 10
+      },
+      "version": {
+        "criticalMessage": "Critical Update Available",
+        "autoCheck": true,
+        "message": "Updates",
+        "title": "Update Available",
+        "criticalTitle": "Critical Version update"
+      },
+      "offers": {
+        "messages": {
+          "errorMessage": "Sorry, please try again later.",
+          "maxRows": 4,
+          "title": "Diner City Offers"
+        },
+        "offeringItems": [
+                          {
+                          "title": "Featured App",
+                          "zone": "featured"
+                          },
+                          {
+                          "title": "Video Clips",
+                          "zone": "video"
+                          },
+                          {
+                          "title": "Offer Wall",
+                          "zone": "offers"
+                          }
+                          ]
+      },
+      "mediation": {
+        "ads": {
+          "menu": {
+            "iad": 1,
+            "admob": 0,
+            "mopub": 0
+          }
+        },
+        "takeovers": {
+          "featured": {
+            "w3i": 1,
+            "chartboost": 0,
+            "tapjoy:featured": 0
+          },
+          "moreapps": {
+            "moreapps": 1
+          },
+          "offers": {
+            "tapjoy:offerwall": 0,
+            "w3i:offerwall": 0,
+            "flurry:offerwall": 1,
+            "aarki_others": 0
+          },
+          "video": {
+            "flurry:video": 0,
+            "aarki_videos": 1
+          }
+        }
+      },
+      "analytics": {
+        "logSize": 100
+      },
+      "moreapps": {}
+    }
+  },
+  "mopub": {
+    "appId": "agltb3B1Yi1pbmNyDQsSBFNpdGUY2rXsDAw"
+  },
+  "tapjoy": {
+    "featuredApp": {
+      "title": "Testing Featured App"
+    },
+    "shouldReload": true,
+    "retryCount": 1,
+    "video": {
+      "cacheCount": 0,
+      "enable": false
+    },
+    "TJCTransitionEnum": 1,
+    "takeovers": {
+      "zones": {
+        "video": "featured"
+      }
+    },
+    "appId": "97084d15-88e9-44e3-8836-82022f590b1c",
+    "appSecret": "a9x5QlhRFDhwyW2j7p6l"
+  }
+}

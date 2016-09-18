@@ -1,0 +1,22 @@
+<Credits>
+  <Office position ="Original Concept &amp; Writing">
+    <Person name="Enrique Rodriguez"/>
+  </Office>
+  <Office position ="Project Lead &amp; Programming">
+    <Person name="Vicente Conejeros" />
+  </Office>
+  <Office position ="Game Programmers">
+    <Person name="Jonathan Monroy" />
+	<Person name="Arturo Vial" />
+  </Office>  
+  <Office position ="Art Director">
+    <Person name="Sebastian Franchini" />
+  </Office>
+  <Office position ="Game Artists">
+    <Person name="Carlos Herrera" />
+	<Person name="Felipe Montecinos" />
+  </Office>  
+  <Office position ="Special Thanks">
+	<Person name="Israel Lazo" />
+  </Office>
+</Credits>
